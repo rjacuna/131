@@ -33,184 +33,57 @@
   \color{teal}(\color{red}862079740\color{teal})\color{black}
 \end{center}\vspace{1.618em}
 
-\paragraph{Q1} Prove that there does not exist a linear map $T:
-\mathbb{R}^5 \rightarrow \mathbb{R}^5$ such that
-\begin{equation*}\text{range}\enskip T = \text{null}\enskip
-  T \end{equation*}
-\uwave{Pf\enskip.}\vspace{0.618 em}
+\paragraph{Q1}
 
-$\forall\enskip T \in \mathcal{L}(\mathbb{R}^5,\mathbb{R}^5):$\\
-$5 = \text{dim\enskip} (\mathbb{R}^5) = \text{dim \enskip null} (T) +
-\text{dim\enskip range} (T) \text{\enskip(by FTLA)}$\\
-Assume $K = \text{dim\enskip null} (T) = \text{dim\enskip range} (T)$\\
-$\Rightarrow 5 = 2K
-\Rightarrow K= \frac{5}{2} \notin \mathbb{N}$, but\enskip
-$\text{dim\enskip null}
-(T) \in \mathbb{N}$\\
-By contradiction $\text{dim\enskip null} (T) \neq \text{dim\enskip
-  range} (T)$\\
-$\Rightarrow \text{range} (T) \neq \text{null} (T)$\quad (by Proposition 1
-in 2C)\\
-$\Rightarrow \not\exists\enskip T: \text{range} (T) = \text{null}
-(T)$\vspace{0.618 em}
-
-$\blacksquare$
-
-\paragraph{Q2} Prove or give a counterexample:\\
-If $T: V \rightarrow W$ is a linear map and $v_1, ... , v_n$ spans
-$V$. Then $T(v_1), ... , T(v_n)$ spans range($T$).
-
-\uwave{Pf\enskip.}\vspace{0.618 em}
-
-range($T$) $= \{w \in W |\enskip \exists\enskip v \in V: w = T(v)\}$
-
-$v_1, ... ,v_n$ spans $V$ $\Rightarrow$ $V =$ span(\{$v_1, ... ,v_n$\})
-
-
-
-$\forall w \in$ range($T$): $\exists\enskip v \in V: \exists a_1, ... ,a_n \in \mathbb{F}: v = \sum_{i=1}^n a_iv_i$:
-
-$w = T(v) \Rightarrow w = T(\sum_{i=1}^n a_iv_i) =
-\sum_{i=1}^na_iT(v_i)$
-
-$\Rightarrow w \in$ span ($\{T(v_1), ... ,T(v_n)\}$)
-
-So, $T(v_1), ... ,T(v_n)$ spans range$(T)$
+\uwave{Pf\enskip.}
 \vspace{0.618 em}
 
+\vspace{0.618 em}\\
 $\blacksquare$
 
 
-\paragraph{Q3} Prove or give a counterexample: Let $T: V \rightarrow
-W$ and $S: V \rightarrow W$ are two linear maps. If null $T$ = null
-$S$, then $T = S$
 
-Let $V=W=\mathbb{R}$: Define $T(x)=x$ and $S(x)=5x$
+\paragraph{Q2}
 
-null $T = \{x\in\mathbb{R}| T(x) = 0\} $
-
-$T$ is the identity map so null $T = \{0\}$
-
-null $S = \{x\in\mathbb{R}| S(x) = 0\}$
-
-$S$ is defined by $x \mapsto 5x$ and $0=5(0) \Rightarrow x = 0$
-
-$\Rightarrow$ null $S$ =$\{0\}$ = null $T$
-
-but, $T \neq S$
-
-\newpage
-\paragraph{Q4} Suppose $V$ and $W$ are both finite-dimensional. Prove
-that there exists an injective linear map from $V$ to $W$ if and only
-if dim $V$ $\leq$ dim $W$
-
-\uwave{Pf\enskip.}\vspace{0.618 em}
-
-($\Rightarrow$) Assume $\exists T: V \rightarrow W$ and $T$ is
-injective.
-
-(by Proposition 1 in 3B) null $T = \{0\} \Rightarrow$ dim null $T = 0$
-
-(by FTLA) dim $V$ = dim null $T +$  dim range $T$
-
-$\Rightarrow$ dim $V$
-$= 0 + $ dim range $T$
-
-$\Rightarrow$ dim $V$ = dim range $T$
-
-range $T \trianglelefteq W \Rightarrow$ dim range $T \leq$ dim $W$
-
-$\Rightarrow$ dim $V \leq$ dim $W$
-
-($\Leftarrow$) Assume $n = $ dim $V$ $\leq$ dim $W = m$
-
-Suppose $B = \{v_1, ... ,v_n\}$ and $B^* = \{w_1, ... ,w_m\}$ are bases
-for $V$ and $W$ respectively.
-
-Consider $R: V \Rightarrow W$ defined by
-
-$R(v_i) = w_i, 1 \leq i \leq n$
-
-$v_i \neq v_j \Rightarrow R(v_i) \neq R(v_j) \Rightarrow w_i \neq
-w_j$, whenever $i \neq j$
-
-$R$ is injective as long as $n \leq m$. If $n > m$, then some $v_k$
-where $k > m$, has to get mapped to some vector in $W$ that has
-already been mapped by $R$.
-
-So, $R$ exists and it is injective.
-
-So, there exists an injective linear map from $V$ to $W$ if and only
-if dim $V \leq$ dim $W$
+\uwave{Pf\enskip.}
 \vspace{0.618 em}
 
+\vspace{0.618 em}\\
 $\blacksquare$
 
-\paragraph{Q5} Prove that there does not exist a linear map from
-$\mathbb{F}^5$ to $\mathbb{F}^2$ whose nullspace equals
 
-\begin{equation*}\{(x_1,x_2,x_3,x_4,x_5)|x_1=3x_2;x_3=x_4=x_5\}\end{equation*}
 
-\uwave{Pf\enskip.}\vspace{0.618 em}
+\paragraph{Q3}
 
-Assume $R: \mathbb{F}^5 \rightarrow \mathbb{F}^2:$ null $R =
-\{(x_1,x_2,x_3,x_4,x_5)|x_1=3x_2;x_3=x_4=x_5, x_i \in \mathbb{F}\}$
-
-$\forall s \in $ null $R
-\Rightarrow s = (3x_2,x_2,x_3,x_3,x_3)$
-
-$\Rightarrow s = x_2(3,1,0,0,0) + x_3(0,0,1,1,1)$
-
-and $(3,1,0,0,0)
-\neq k(0,0,1,1,1)$, $k \in \mathbb{F}$, because $1 \neq k0 = 0$
-
-$\Rightarrow B = \{ (3,1,0,0,0), (0,0,1,1,1) \}$ is a basis for null $R$
-
-$\Rightarrow$ dim null $R = |B| = 2$
-
-dim $\mathbb{F}^5 =$ dim null $R + $ dim range $R$ (By FTLA)
-
-$5 = 2 + $ dim range $R \Rightarrow$ dim range $R = 5 - 2 = 3$
-
-range $R \trianglelefteq \mathbb{F}^2 \Rightarrow$ dim range $R \leq$ dim
-$_{\mathbb{F}}\mathbb{F}^2 = 2\Rightarrow 3 \leq 2 \Rightarrow False$
-
-So, by contradiction to our assumption $R$ doesn't exist
+\uwave{Pf\enskip.}
 \vspace{0.618 em}
 
+\vspace{0.618 em}\\
 $\blacksquare$
 
-\newpage
+\paragraph{Q4}
 
-\paragraph{Q6} Suppose $T \in \mathcal{L}(V,W)$ is injective and
-$\{v_1, ... ,v_n\}$ is linearly independent in $V$. Prove or disprove
-$\{T(v_1), ... ,T(v_n)\}$ is linearly independent in $W$.
-
-\uwave{Pf\enskip.}\vspace{0.618 em}
-
-$\forall T \in \mathcal{L}(V,W)$: $T$ is injective
-
-$\Rightarrow$ null $T = \{0\}$
-
-and $\{v_1, ... ,v_n\}$ is linearly independent in $V$
-
-Set up the dependence test equation as such
-
-$\sum_{i=1}^na_iT(v_i) = 0: \exists a_1, ... , a_n \in \mathbb{F}$
-
-$\Rightarrow \sum_{i=1}^na_iT(v_i) = T(\sum_{i=1}^na_iv_i) = 0$
-
-$\sum_{i=1}^na_iv_i \in $ null $ T \Rightarrow \sum_{i=1}^na_iv_i \in \{0\}$
-
-$ \Rightarrow \sum_{i=1}^na_iv_i = 0 $
-
-Since $\{v_1, ... ,v_n\}$ is linearly independent in $V$, then $a_1 =
-... = a_n = 0$.
-
-So, $\{T(v_1), ... ,T(v_n)\}$ is linearly independent in $W$.
-
+\uwave{Pf\enskip.}
 \vspace{0.618 em}
 
+\vspace{0.618 em}\\
+$\blacksquare$
+
+\paragraph{Q5}
+
+\uwave{Pf\enskip.}
+\vspace{0.618 em}
+
+\vspace{0.618 em}\\
+$\blacksquare$
+
+
+\paragraph{Q6}
+
+\uwave{Pf\enskip.}
+\vspace{0.618 em}
+
+\vspace{0.618 em}\\
 $\blacksquare$
 
 
