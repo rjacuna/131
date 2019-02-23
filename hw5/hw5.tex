@@ -1,0 +1,303 @@
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
+
+\documentclass{article}
+\usepackage{fontspec}
+\usepackage{xcolor}
+
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{unicode-math}
+\usepackage[makeroom]{cancel}
+
+\usepackage[normalem]{ulem} %underline styles
+
+\setmainfont{Times New Roman}
+\setmathfont{Latin Modern Math}
+
+\setlength\parindent{1em}
+\setlength\parskip{0.5em}
+\usepackage[a4paper, lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+
+\usepackage{enumitem}
+
+\renewcommand\qedsymbol{$\blacksquare$}
+\begin{document}
+
+\begin{center}
+  \textbf{MATH} 131---\textbf{HOMEWORK} 5
+
+  \color{red}R\color{teal}icardo
+  \color{red}J\color{cyan}.
+  \color{red}A\color{teal}cu$\color{red}{\widetilde{\color{teal}\text{n}}}$\color{teal}a\color{black}
+
+  \color{teal}(\color{red}862079740\color{teal})\color{black}
+\end{center}\vspace{1.618em}
+
+``$\trianglelefteq$'' $:=$ ``Subspace''
+\paragraph{Q1}  Suppose $U$ and $W$ are both five-dimensional subspaces of $\mathbb{R}^9$.
+Prove that $U \cap W  \neq \{0\}$.
+
+\begin{proof} Want to show $U \cap W  \neq \{0\}$.\\
+  $\forall V \trianglelefteq \mathbb{R}^9$:\enskip $\forall W \trianglelefteq \mathbb{R}^9$:\\
+  $V + W $$\trianglelefteq \mathbb{R}^9$ (by Proposition 3 in 1C)
+  $\Rightarrow$  dim $V + W$ $\leq 9$ (by Proposition 1 in 2C)\\
+  $\Rightarrow$ $9 \geq$ dim $V + W$= dim $V$ $+$ dim $W$ $-$ dim $V
+  \cap W$ (by Theorem 2 in 2C)\\
+  $\Rightarrow$ $9 \geq$ dim $V + W$=  $5 + 5$ $-$ dim $V \cap W$\\
+  $\Rightarrow$ $9 \geq$ dim $V + W$=  $10$ $-$ dim $V \cap W$ (0) \\
+  Suppose, $U \cap W = \{0\}$.\\
+  $\Rightarrow$ dim $U \cap W =$ dim $\{0\}$ (1)\\
+  Check the dependence test equation $a0 = 0$,\\
+  by the zero factors
+  theorem $\exists a \in \mathbb{R}: a \neq 0$.\\
+  $\Rightarrow 0$ the only element of $\{0\}$ is not linearly
+  independent.\\
+  So, the number of linearly independent vectors in $\{0\}$
+  is $0$.\\
+  Therefore, $\emptyset$ is the set that
+  contains all of the linearly independent vectors in $\{0\}$.\\
+  So, $\emptyset$ is linearly independent and Span $\emptyset$ = $\{0\}$ (by Definition 2 in 2A)\\
+  It follows that $\emptyset$ is a basis for $\{0\}$ (by Definition 1
+  in 2B)\\
+  $\Rightarrow$ dim $\{0\} = |\emptyset| = 0$ (by Definition 1 in 2C)\\
+  (1) $\Rightarrow$ dim $U \cap W = 0$.\\
+  (0) $\Rightarrow$ $9 \geq$ dim $V + W =$  $10$ $-$ dim $V \cap W$$ =10 -
+  0 =10$\\
+  $\Rightarrow 9 \geq 10$ $\Rightarrow$ False \\
+  By, contradiction to our assumption $U \cap W \neq \{0\}$\\
+\end{proof}
+
+\paragraph{Q2} Let $U = \{p ∈\ P_4(\mathbb{R}) : p′′(4) = 0\}$.
+\begin{enumerate}[label=(\alph*)]
+\item Show that $U$ is a subspace of $P_4(\mathbb{R})$.
+\item Find a basis of $U$.
+\item Extend the basis in part (b) to a basis of $P_4(\mathbb{R})$.
+\end{enumerate}
+
+\begin{proof} Want to show $U\trianglelefteq P_4(\mathbb{R})$\\
+  $\forall p,q \in U: \forall x \in \mathbb{R}:$\\
+  $(p+q)(x) = p(x)+q(x)$\\
+  $\Rightarrow (p+q)^{\prime\prime}(4) = ((p(4)+q(4))^\prime)^\prime=
+  (p^\prime(4)+q^\prime(4))^\prime = p^{\prime\prime}(4) +
+  q^{\prime\prime}(4) = 0 + 0 = 0$\\
+  $\Rightarrow (p+q)^{\prime\prime}(x) \in U$ (0)\\
+  $\forall r \in U: \forall x,a \in \mathbb{R}$:\\
+  $(ar)(x)= a(r(x))$\\
+  $\Rightarrow (ar)^{\prime\prime}(4) = ((a(r(4)))^{\prime})^\prime=
+  (a(r^{\prime}(4)))^\prime = a(r^{\prime\prime}(4)) = a0 = 0$\\
+  $\Rightarrow (ar)(x) \in U$ (1)\\
+  (0) and (1) $\Rightarrow U$ is closed under vector addition and
+  scalar multiplication.\\
+  $U\trianglelefteq P_4(\mathbb{R})$\\
+\end{proof}
+
+\newpage
+For part (b):
+$\forall p(t) ∈\ P_4(\mathbb{R}) =$ Span $(1,t,t^2,t^3,t^4):$\enskip $\exists
+a_0,a_1,a_2,a_3,a_4 \in \mathbb{R}:$\\
+$p(t) = a_0+a_1t+a_2t^2+a_3t^3+a_4t^4$\\
+$\Rightarrow p^\prime(t) = a_1+2a_2t+3a_3t^2+4a_4t^3$\\
+$\Rightarrow p^{\prime\prime}(t) = 2a_2+6a_3t+12a_4t^2$\\
+If $p(t) \in U$, then $p^{\prime\prime}(4)=0$\\
+$\Rightarrow p^{\prime\prime}(4) = 2a_2+6a_34+12a_4(4)^2=
+2a_2+24a_3+192a_4=0$\\
+$\Rightarrow a_2=-12a_3-96a_4$\\
+Let $p(t) \in U$ $\Rightarrow p(t) = a_0+a_1t +(-12a_3-96a_4)t^2+a_3t^3+a_4t^4$\\
+If $a_0 = 1$ and $a_1 = a_3 = a_4 =0$, then $p_0(t) = 1$.\\
+If $a_1 = 1$ and $a_0 = a_3 = a_4 =0$, then $p_1(t) = t$.\\
+If $a_3 = 1$ and $a_0 = a_1 = a_4 =0$, then $p_3(t) = -12t^2+t^3$.\\
+If $a_4 = 1$ and $a_0 = a_1 = a_3 =0$, then $p_4(t) = -96t^2+t^4$.\\
+Check, if $B = \{p_0,p_1,p_3,p_4\}$ is linearly independent by setting
+up the dependence test equation:\\
+$b_01 + b_1t + b_3(-12t^2+t^3) +b_4(-96t^2+t^4) = 0$\\
+$\Rightarrow b_0 + b_1t -12b_3t^2 + b_3t^3 -96b_4t^2 + b_4t^4= 0$\\
+$\Rightarrow b_0 + b_1t -12b_3t^2 -96b_4t^2 + b_3t^3 + b_4t^4 = 0$\\
+$\Rightarrow b_0 + b_1t +(-12b_3 -96b_4)t^2 +b_3t^3 + b_4t^4 = 0$\\
+$\{1,t,t^2,t^3,t^4\}$ is linearly independent $\Rightarrow b_0 = b_1 =  b_3 = b_4=0$\\
+$\Rightarrow B$ is linearly independent\\
+Since, we got the set $B$ by expressing the dependent variable for an
+arbitrary vector in $U$ in terms of free variables, the
+set $B$ is still a spanning set of $U$.\\
+So, $B=\{1,t,-12t^2+t^3,-96t^2+t^4\}$ is a basis of $U$ (by Definition 1 in 2B)\\
+
+For part (c):\\
+Let $B_0=(1,t,-12t^2+t^3,-96t^2+t^4,1,t,t^2,t^3,t^4)$ an ordered list:\\
+We've seen the first 4 are already non-zero and linearly
+independent,\\
+For the fifth, is just equal to the first, so we delete it.\\
+$\Rightarrow B_1= (1,t,-12t^2+t^3,-96t^2+t^4,t,t^2,t^3,t^4)$\\
+For the fifth in $B_1$, is just equal to the second, so we delete it.\\
+$\Rightarrow B_2= (1,t,-12t^2+t^3,-96t^2+t^4,t^2,t^3,t^4)$\\
+Check the dependence test equation:\\
+$d_11+d_2t+d_3(-12t^2+t^3)+d_4(-96t^2+t^4) +d_5t^2=0$\\
+$\Rightarrow d_11+d_2t -12d_3t^2 +d_3t^3 -96d_4t^2 + d_4t^4 +d_5t^2 =\\
+d_1 + d_2t -12d_3t^2  -96d_4t^2 +d_5t^2 +d_3t^3 + d_4t^4 =\\
+d_1 + d_2t +(-12d_3 -96d_4 +d_5)t^2 +d_3t^3 + d_4t^4 = 0 $\\
+$\{1,t,t^2,t^3,t^4\}$ is linearly independent $\Rightarrow d_1 = d_2 =
+d_3 = d_4=0$ and $-12d_3 -96d_4 +d_5 =0$\\
+$\Rightarrow -12d_3 -96d_4+ d_5 = -12(0) -96(0) +d_5 = 0+0+d_5=d_5=0$\\
+$\Rightarrow B_3=\{1,t,-12t^2+t^3,-96t^2+t^4,t^2\}$ is linearly independent\\
+Since $|B_3| = 5 =$ dim $P_4(\mathbb{R})$, $B_3$ is a basis of
+$P_4(\mathbb{R})$ (by Proposition 2 in 2C).\\
+\newpage
+\paragraph{Q3} $\mathbb{C}^n$ can be thought of as $\mathbb{C}$–vector space and $\mathbb{R}$–vector space. Find the
+bases of $\mathbb{C}^n$ over $\mathbb{C}$ and $\mathbb{R}$
+respectively. Compute dim$_{\mathbb{C}}\mathbb{C}^n$  and
+dim$_{\mathbb{R}}\mathbb{C}^n$.
+
+If we think about $\mathbb{C}^n$ as a $\mathbb{C}$-vector space
+$\mathbb{C}^n=\{(\alpha_1, ... ,\alpha_n)| \alpha_i \in \mathbb{C}\}$.\\
+It's easy to see that $B = \{e_1, ... ,e_n\}$ the standard basis, is a basis for
+$\mathbb{C}^n$. $B$ is linearly independent by construction. And,
+since Span
+$B$ $= \sum_{i=1}^n \beta_ie_i$, $\beta_i \in \mathbb{C}$. Every vector in
+$\mathbb{C}^n$ is in Span $B$, because every possible complex number gets sent
+to every possible entry in every vector in $\mathbb{C}^n$. So $B$ is a
+linearly independent, spanning set of $\mathbb{C}^n$.  So $B$ is a
+basis of $\mathbb{C}^n$.Therefore, dim
+$_{\mathbb{C}}\mathbb{C}^n$$=|B|=n$.
+
+If we think about $\mathbb{C}^n$ as a $\mathbb{R}$-vector space
+$\mathbb{C}^n=\{(\a_1+b_1\textsc{i}, ... , a_n+b_n\textsc{i})| a_j,b_j \in \mathbb{R}\}$\\
+Let $B^* = \{e_1, ... ,e_n\}\cup \{\textsc{i}e_1, ... ,\textsc{i}e_n\}$ where the left
+side of the union is the standard basis, and the right hand side is
+every element of the standard basis times \textsc{i}, we want to show it is a basis for
+$\mathbb{C}^n$. $B$ is linearly independent by construction, so we
+need only check whether we should keep the rest of the
+elements. Since, $\textsc{i}e_j$ is the vector with $\textsc{i}$ in the $_j$th place,
+and zeros elsewhere,
+the only candidate where a dependency would show up is $e_j$. Now,
+recall $\textsc{i}^2=-1$ has no solutions in $\mathbb{R}$, it follows
+$\textsc{i}$ is not a real number. So, $\textsc{i}e_j\neq
+ke_j$ some $k \in \mathbb{R}$. So, every $\textsc{i}e_j$ is independent from
+vectors in $B$. All that's left to check is that the right hand side
+of the union is linearly independent, it is by construction, since it
+inherits its independence from $B$. So, $B^*$ is linearly
+independent. \\
+Now we can express $B^*$ as $B^*=\{e_1,
+... ,e_n,\textsc{i}e_{n+1}, ... ,\textsc{i}e_{2n}\}$.\\
+And, since Span
+$B^*$ $= \sum_{j=1}^{2n} a_je_j+b_j\textsc{i}e_j = \sum_{j=1}^{2n}
+(a_j + b_j\textsc{i})e_j$, $a_j,b_j \in \mathbb{R}$. Every vector in
+$\mathbb{C}^n$ is in Span $B$, because every possible real number gets sent
+to every possible complex entry in every vector in $\mathbb{C}^n$. So $B$ is a
+linearly independent, spanning set of $\mathbb{C}^n$. So $B^*$ is a
+basis of $\mathbb{C}^n$.Therefore, dim
+$_{\mathbb{R}}\mathbb{C}^n$$=|B^*|=2n$.
+
+
+\paragraph{Q4} Suppose $b, c ∈ \mathbb{R}$. Define $T : \mathbb{R}^3 →
+\mathbb{R}^2$ by
+
+\[T (x, y, z) = (2x − 4y + 2z + b, 6x + cxyz)\]
+
+Show that $T$ is linear if and only if $b = c = 0$.
+
+\begin{proof} Want to show that $T$ is linear if and only if $b = c = 0$.\\
+  ($\Rightarrow$) Assume $T$ is linear\\
+  $\forall (s_1,s_2,s_3),(t_1,t_2,t_3) \in \mathbb{R}^3:
+  \forall r \in \mathbb{R}:$\\
+  $\Rightarrow T((s_1,s_2,s_3)+(t_1,t_2,t_3)) = T(s_1,s_2,s_3) +
+  T(t_1,t_2,t_3)$\\
+  $\Rightarrow T(s_1+t_1,s_2+t_2,s_3+t_3) = (2(s_1+t_1) − 4(s_2+t_2) +
+  2(s_3+t_3) + b, 6(s_1+s_2) + c(s_1+t_1)(s_2+t_2)(s_3+t_3))$\\
+$\Rightarrow T(s_1,s_2,s_3) = (2s_1 − 4s_2 +
+  2s_3 + b, 6s_1 + cs_1s_2s_3)$\\
+$\Rightarrow T(t_1,t_2,t_3) = (2t_1 − 4t_2 +
+  2t_3 + b, 6t_1 + ct_1t_2t_3)$\\
+  $\Rightarrow T(s_1,s_2,s_3) +
+  T(t_1,t_2,t_3) = (2(s_1+t_1) − 4(s_2+t_2) +
+  2(s_3+t_3) + 2b, 6(s_1+s_2) + c(s_1s_2s_3+t_1t_2t_3))$\\
+  $\Rightarrow$\\
+  $(2(s_1+t_1) − 4(s_2+t_2) + 2(s_3+t_3) + b, 6(s_1+s_2) +
+  c(s_1+t_1)(s_2+t_2)(s_3+t_3))  =\\
+  (2(s_1+t_1) − 4(s_2+t_2) + 2(s_3+t_3) + 2b, 6(s_1+s_2) +
+   c(s_1s_2s_3+t_1t_2t_3))$\\
+  $\Rightarrow b=2b $ and $c(s_1+t_1)(s_2+t_2)(s_3+t_3)=c(s_1s_2s_3+t_1t_2t_3)$\\
+  $\Rightarrow b = 0$\\
+  $c(s_1+t_1)(s_2+t_2)(s_3+t_3)=c(s_1s_2s_3+t_1t_2t_3)$$\Rightarrow$$c((s_1+t_1)(s_2+t_2)(s_3+t_3)-(s_1s_2s_3+t_1t_2t_3))=0$\\
+  $\Rightarrow (s_1+t_1)(s_2+t_2)(s_3+t_3)-(s_1s_2s_3+t_1t_2t_3)=0$ or $c=0$\\
+  $\Rightarrow$\\
+  $(s_1+t_1)(s_2+t_2)(s_3+t_3)-(s_1s_2s_3+t_1t_2t_3)=$\\
+  $(s_1s_2+2t_1s_2+t_1t_2)(s_3+t_3)-(s_1s_2s_3+t_1t_2t_3)= $\\
+  $(s_1s_2s_3 + 2t_1s_2s_3 + t_1t_2s_3)
+  +(s_1s_2t_3 + 2t_1s_2t_3 + t_1t_2t_3)-(s_1s_2s_3+t_1t_2t_3)=$\\
+  $(\bcancel{s_1s_2s_3} + 2t_1s_2s_3 + t_1t_2s_3)
+  +(s_1s_2t_3+2t_1s_2t_3+\cancel{t_1t_2t_3})
+  -(\bcancel{s_1s_2s_3}+\cancel{t_1t_2t_3}) =$\\
+$ 2t_1s_2s_3 + t_1t_2s_3 +s_1s_2t_3+2t_1s_2t_3 = 0$\\
+Since, $T$ is a map it must be defined for all elements of its
+domain. So, for $T$ to be linear on $\mathbb{R}^3$ there must be no
+restriction on $(s_1,s_2,s_3)$ and $(t_1,t_2,t_3)$. So, $c$ must be
+$0$. And we already have that $b=0$. So, $b=c=0$.\\
+With that condition on $T$ verify the second linearity property:\\
+  $T(r(s_1,s_2,s_3)) = T(rs_1,rs_2,rs_3) = (2rs_1 -4rs_2
+  +2rs_3,6rs_1)$\\
+  and\\
+  $rT(s_1,s_2,s_3) = r(2s_1 − 4s_2 + 2s_3, 6s_1) = (r(2s_1
+  − 4s_2 + 2s_3), r6s_1) = (2rs_1 -4rs_2 +2rs_3,6rs_1)$\\
+  $\Rightarrow T(r(s_1,s_2,s_3)) = rT(s_1,s_2,s_3)$\quad (0)\\
+  \newpage
+  ($\Leftarrow$) Assume $b=c=0$\\
+  $\Rightarrow T(x,y,z) = (2x -4y + 2z , 6x)$\\
+  The second linearity property holds by equation (0) when
+  $b=c=0$.\\
+  $T(s_1,s_2,s_3) +
+  T(t_1,t_2,t_3) = \\ (2s_1 − 4s_2 +
+  2s_3, 6s_1) + (2t_1 − 4t_2 +
+  2t_3, 6t_1)=\\
+  (2(s_1+t_1) − 4(s_2+t_2) +
+  2(s_3+t_3), 6(s_1+s_2) =\\ T(s_1+t_1,s_2+t_2,s_3+t_3) =\\
+  T((s_1,s_2,s_3)+(t_1,t_2,t_3))$\\
+  So, $T$ is linear if and only if $ b = c = 0.$
+\end{proof}
+
+\paragraph{Q5} Suppose $T ∈ T(V, W)$ and $v_1 , ... , v_m$ is a list of vectors in $V$ such
+that $T(v_1), ... ,T(v_m)$ is a linearly independent list in $W$. Prove or give a counterexample:
+$v_1, ... ,v_m$ is linearly independent.
+
+\begin{proof} Want to show if $T \in T(V,W)$
+   and for $v_1, ... ,v_m$ a list of vectors in $V$, $T(v_1), ... ,T(v_m)$ is a linearly
+  independent list of vectors in $W$, then $v_1, ... ,v_m$ is linearly
+  independent.\\
+  $\forall T \in T(V,W):\enskip \exists\enskip a_i \in \mathbb{F}:$\\
+  For some list $v_1, ... ,v_n$ of vectors in $V$, $T(v_1), ... ,T(v_m)$ is a linearly
+  independent list of vectors in $W$\\
+  $\Rightarrow$ ($a_1T(v_1) + ... + a_mT(v_m) = 0 \Rightarrow \forall
+  i: a_i = 0 $)\\
+  $T \in T(V,W) \Rightarrow T$ is linear $\Rightarrow$ \\
+  $a_1T(v_1) + ... + a_mT(v_m) = \sum_{i=1}^ma_iT(v_i)=
+  \sum_{i=1}^mT(a_iv_i) = T(\sum_{i=1}^ma_iv_i)=0$\\
+  $\forall v \in V:  T(v) = 0 \Rightarrow T(v) = 0T(v) = T(0v) = T(0)
+  = 0 \Rightarrow v = 0$\\
+  $\Rightarrow \sum_{i=1}^ma_iv_i = a_1v_1 + ... + a_mv_m = 0$\\
+  Recall $\forall i: a_i=0 \Rightarrow v_1, ... , v_m$ is linearly independent.
+
+\end{proof}
+
+\paragraph{Q6} Give an example of a function $\phi : \mathbb{R}^2 →
+\mathbb{R}$ such that
+
+\[\phi(av) = a\phi(v)\]
+
+for all $a ∈ \mathbb{R}$ and all $v ∈ \mathbb{R}^2$ but $\phi$ is not
+linear.\vspace{1.618em}
+
+$(x,y)\mapsto \sqrt{xy}$\\
+$a(x,y)=(ax,ay)\mapsto \sqrt{axay} = \sqrt{a^2xy} = a\sqrt{xy}$\\
+Consider $(1,1) \mapsto 1$ and $(4,1) \mapsto 2$,\\
+$(1,1) + (4,1) = (5,2) \mapsto \sqrt{10}$\\
+$1+2 = 3 = \sqrt{10} \Rightarrow 3^2 = 9 = 10 \Rightarrow false$\\
+$\Rightarrow (x,y)\mapsto \sqrt{xy}$ is not linear.
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

@@ -1,0 +1,397 @@
+\documentclass{article}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{unicode-math}
+\usepackage[makeroom]{cancel}
+\usepackage{nicematrix}
+
+\usepackage[normalem]{ulem} %Underline
+\setmainfont{Times New Roman}
+\setmathfont{Latin Modern Math}
+\setlength\parindent{0pt}
+\usepackage[a4paper, lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+
+\begin{document}
+
+\begin{center}
+  \textbf{MATH} 131---\textbf{HOMEWORK} 4\\
+  \color{red}R\color{teal}icardo
+  \color{red}J\color{cyan}.
+  \color{red}A\color{teal}cu$\color{red}{\widetilde{\color{teal}\text{n}}}$\color{teal}a\color{black}\\
+  \color{teal}(\color{red}862079740\color{teal})\color{black}\\
+\end{center}\vspace{1.618cm}
+
+Q1\quad Suppose $v_1 , ... , v_m$ is linearly independent in $V$
+and $w \in V$. \\Prove that if
+$v_1 + w, ... , v_m + w$
+is linearly dependent, then $w \in Span(v_1 , ... , v_m).$\\
+
+\uwave{pf\enskip .}\\
+Suppose $v_1 , . . . , v_m$ is linearly independent in $V$
+and $w \in V$.\\
+Also, suppose $v_1 + w, ... , v_m + w$ is linearly dependent.\\
+$\Rightarrow$ $a_1(v_1 + w) + ... + a_m(v_m + w) = 0$ and $\exists a_k \in \{a_i\}_{1}^{m} \subset \mathbb{F}: a_k \neq 0_{\mathbb{F}}$\\
+Add the additive inverse $-a_m(v_m + w)$ to both sides.\\
+$\Rightarrow$ $b_1(v_1 + w) + ... + b_{m-1}(v_{m-1} + w) = -a_k(v_k+ w)$ where $\{b_j\}_{1}^{m-1} = \{a_i\}_{1}^m \backslash{\{a_k\}}$\\
+Here the $b_j$s represent a re-indexing of the $a_i$s with $a_k$ removed.\\
+
+By the distributive property of scalars over sums of vectors,\\
+$\Rightarrow$ $b_{1}v_1 + b_{1}w + ... + b_{m-1}v_{m-1} + b_{m-1}w = -a_kv_k -a_kw$\\
+Add $a_kv_k$ to both sides,\\
+$\Rightarrow$ $b_{1}v_1 + b_{1}w + ... + b_{m-1}v_{m-1} + b_{m-1}w +  a_kv_k = -a_kw$\\
+Add every $-b_jw$ to both sides,\\
+$\Rightarrow$ $b_{1}v_1+ ... + b_{m-1}v_{m-1} + a_kv_k = b_1w + ... + b_{m-1}w -a_kw$\\
+By distributive property of vectors over sums of scalars,\\
+$\Rightarrow$ $b_{1}v_1+ ... + b_{m-1}v_{m-1} + a_kv_k = (b_1 +
+... +b_{m-1} -a_k)w$ (1)\\
+
+Assume $b_1 + ... +b_{m-1} -a_k = 0$\\
+$\Rightarrow$ $0w = 0$\\
+$\Rightarrow$ $b_{1}v_1+ ... + b_{m-1}v_{m-1} + a_kv_k = 0$ (2)\\
+Since $a_1(v_1 + w) + ... + a_m(v_m + w) = 0$, was the dependence test equation,
+and we solved for $a_k$ and then re-indexed the remaining terms with
+the $b_j$s.\\
+Before
+adding back the $a_kv_k$ to the left-hand side of the equation the
+left hand side didn't contain any multiple of $v_k$.\\
+Now, equation (2)
+becomes the dependence test equation, for $v_1, ... ,v_m$. Since, we
+know $v_1, ... ,v_m$ is linearly independent, this equation has
+solutions only if all the scalars are $0$, in particular $a_k \neq 0$.\\
+$\Rightarrow$ (1) is false---i.e: not equal to zero.\\
+So, by contradiction our assumption is false.\\
+$\Rightarrow$ $b_1 + ... +b_{m-1} -a_k \neq 0$\\
+$\Rightarrow$ $\exists \alpha^{-1} \in \mathbb{F}: \alpha^{-1}(b_1 +
+... +b_{m-1} -a_k) = 1_{\mathbb{F}} $.\\
+Multiply by $\alpha^{-1}$ on both sides of (1),\\
+$\Rightarrow$ $\alpha^{-1}(b_{1}v_1+ ... + b_{m-1}v_{m-1} + a_kv_k) =
+\alpha^{-1}(b_1 + ... +b_{m-1} -a_k)w = 1w =1$\\
+By the distributive property of scalars over sums of vectors,\\
+$\Rightarrow$ $\alpha^{-1}b_{1}v_1+ ... +\alpha^{-1}b_{m-1}v_{m-1} +
+\alpha^{-1}a_kv_k = w$\\
+Let $\alpha^{-1}b_jv_j=d_lv_l$, $1 \leq l \leq m-1$, and
+$\alpha^{-1}a_kv_k=d_mv_m$:\\
+$\Rightarrow$ $d_{1}v_1+ ... +d_{m}v_{m}= w$\\
+$\Rightarrow$ $ w \in$ Span$(v_1, ... ,v_m)$\\
+\begin{flushright}
+  $\blacksquare$
+\end{flushright}
+\newpage
+
+Q2\quad Let $V = \{A \in$Mat$_{2\times2}(\mathbb{F}) |\enskip$ tr $A =
+0\}$. Find a basis of $V$.\\
+
+$\forall A \in V:$ tr $A = 0$\\
+$\Rightarrow a_{11}+a_{22}=0$\\
+$\Rightarrow a_{22}=-a_{11}$\\
+In particular any $A \in V$ has the form:
+$\begin{pmatrix}
+a_{11}&a_{12}\\
+a_{21}&-a_{11}
+\end{pmatrix}$\\
+
+So, by alternatively setting each of the three free variables one can get a
+basis for $V$:\vspace{1.618 mm}
+
+$B =\{\begin{pmatrix}
+1&\enskip0\\
+0&-1
+\end{pmatrix},\begin{pmatrix}
+0&\enskip1\\
+0&\enskip0
+\end{pmatrix},\begin{pmatrix}
+0&\enskip0\\
+1&\enskip0
+\end{pmatrix}\}$\\
+
+
+Span $(B) = a\begin{pmatrix}
+1&\enskip0\\
+0&-1
+\end{pmatrix}
++ b\begin{pmatrix}
+0&\enskip1\\
+0&\enskip0
+\end{pmatrix}
++c\begin{pmatrix}
+0&\enskip0\\
+1&\enskip0
+\end{pmatrix} =
+\begin{pmatrix}
+a&b\\
+c&-a
+\end{pmatrix}$\\
+
+Clearly any $W \in$ Span $(B)$ has tr $W = 0$
+So, Span $(B) = V$
+
+And,\\
+
+$a\begin{pmatrix}
+1&\enskip0\\
+0&-1
+\end{pmatrix}
++ b\begin{pmatrix}
+0&\enskip1\\
+0&\enskip0
+\end{pmatrix}
++c\begin{pmatrix}
+0&\enskip0\\
+1&\enskip0
+\end{pmatrix} =
+\begin{pmatrix}
+0&0\\
+0&0
+\end{pmatrix} \Rightarrow a = b =c = 0$\\
+
+$\Rightarrow B$ is linearly independent.\\
+So, $B$ is a basis for $V$.\\
+
+Q3\quad Let $U$ be the subspace of $\mathbb{C}^5$ defined by:\\
+$U = \{(z_1 , z_2 , z_3 , z_4 , z_5) \in \mathbb{C}^5 : 6z_1 = z_2$ and
+$
+z_3 + 2z_4 + 3z_5 = 0\}$.\\
+(a) Find a basis of $U$.\\
+(b) Extend the basis in part (a) to a basis of $\mathbb{C}^5$.\\
+
+(I) Let $z_1 = 1$ and $z_3 = z_4 = z_5 = 0$, then $6(1) = z_2$ $\Rightarrow (1,6,0,0,0) \in U$\\
+(II) Let $z_1 = 0 \Rightarrow z_2 = 0$:\\
+$(\alpha)$ $z_3=0$ and $z_4 = 3 \Rightarrow z_5 = -2 \Rightarrow (0,0,0,3,-2) \in U$\\
+$(\beta)$ $z_4=0$ and $z_3 = 3 \Rightarrow z_5 = -1 \Rightarrow
+(0,0,3,0,-1) \in U$\\
+$(\gamma)$ $z_5=0$ and $z_3 = 2 \Rightarrow z_4 = -1 \Rightarrow
+(0,0,2,-1,0) \in U$\\
+
+$B = \{(1,6,0,0,0),(0,0,0,3,-2),(0,0,3,0,-1),(0,0,2,-1,0)\}$ (a)\\
+
+$\forall z \in$ Span $(B): \exists\enskip a,b,c,d \in \mathbb{C}:$\\
+$ z = a(1,6,0,0,0) + b(0,0,0,3,-2) + c(0,0,3,0,-1) +
+d(0,0,2,-1,0) = (a,6a,3c+2d,3b-d,-2b-c)$ (0) \\
+
+$\Rightarrow z_1=a,$ and $z_2=6a \Rightarrow 6z_1=z_2$ (1)\\
+
+$\Rightarrow z_3 = 3c+2d$ and $z_4=3b-d$ and $z_5=-2b-c$\\
+$\Rightarrow z_3 + 2z_4 + 3z_5 = 3c+2d + 2(3b-d) + 3(-2b-c) = 3c + 2d + 6b -2d -6b -3c$\\
+$\Rightarrow z_3 + 2z_4 + 3z_5 = \cancel{3c} + \color{teal}\bcancel{2d}\color{black}
++\color{orange} \xcancel{6b} \color{black} -\color{teal}\bcancel{2d}\color{black}
+-\color{orange}\xcancel{6b}\color{black} -\cancel{3c} = 0$ (2)\\
+
+(1) and (2) $\Rightarrow$ Span $(B) = U$
+\newpage
+Solve for $a,b,c,d$ in equation (0) when $z = 0$:\\
+$a(1,6,0,0,0) + b(0,0,0,3,-2) + c(0,0,3,0,-1) +
+d(0,0,2,-1,0) = 0$\\
+$\Rightarrow$
+$\begin{pmatrix}
+  1&0&0&0\\
+  6&0&0&0\\
+  0&0&3&2\\
+  0&3&0&-1\\
+  0&-2&-1&0\\
+\end{pmatrix}
+\begin{pmatrix}
+  a\\b\\c\\d
+\end{pmatrix} = 0$\\
+
+Do Gaussian-Elimination:\\
+$
+\left( \begin{array}{cccc|c}
+         1&0 & 0 & 0 & 0 \\
+         6&0 & 0 & 0 & 0 \\
+         0&  0 & 3 & 2 & 0 \\
+         0&  3 & 0 & -1 & 0 \\
+         0&  -2 & -1 & 0 & 0
+         \end{array} \right)\\
+       \xrightarrow[-\frac{R_1}{6}+R_2\mapsto R_2]{R_4 \rightleftharpoons R_3}
+       \left( \begin{array}{cccc|c}
+                1&0 & 0 & 0 & 0 \\
+         0&0 & 0 & 0 & 0 \\
+          0& 3 & 0 & -1 & 0 \\
+          0& 0 & 3 & 2 & 0 \\
+          0& -2 & -1 & 0 & 0
+       \end{array} \right)\\
+     \xrightarrow[]{\frac{2}{3}R_3+R_5\mapsto R_5}
+     \left( \begin{array}{cccc|c}
+              1&0 & 0 & 0 & 0 \\
+         0&0 & 0 & 0 & 0 \\
+          0& 3 & 0 & -1 & 0 \\
+          0& 0 & 3 & 2 & 0 \\
+          0& 0 & -1 & -2/3 & 0
+       \end{array} \right)\\
+     \xrightarrow[]{\frac{1}{3}R_4+R_5\mapsto R_5}
+     \left( \begin{array}{cccc|c}
+              1&0 & 0 & 0 & 0 \\
+         0&0 & 0 & 0 & 0 \\
+          0& 3 & 0 & -1 & 0 \\
+          0& 0 & 3 & 2 & 0 \\
+          0& 0 & 0 & 0 & 0
+       \end{array} \right)\\
+     \xrightarrow[\frac{1}{3}R_4\mapsto R_4]{\frac{1}{3}R_3\mapsto R_4}
+     \left( \begin{array}{cccc|c}
+              1&0 & 0 & 0 & 0 \\
+         0&0 & 0 & 0 & 0 \\
+         0&1 & 0 & -\frac{1}{3} & 0 \\
+         0&0 & 1 & \frac{2}{3} & 0 \\
+          0& 0 & 0 & 0 & 0
+            \end{array} \right)\\
+          \xrightarrow[R_3\rightleftharpoons R_2]{R_4\rightleftharpoons R_3}
+     \left( \begin{array}{cccc|c}
+              1&0 & 0 & 0 & 0 \\
+              0&1 & 0 & -\frac{1}{3} & 0 \\
+              0&0 & 1 & \frac{2}{3} & 0 \\
+         0&0 & 0 & 0 & 0 \\
+          0& 0 & 0 & 0 & 0
+            \end{array} \right)$\\
+          $\Rightarrow (0,0,2,-1,0) =
+          -\frac{1}{3}(0,0,0,3,-2)+\frac{2}{3}(0,0,3,0,-1)\\
+          \Rightarrow (0,0,2,-1,0) =
+          (0,0,0,-1,+\frac{2}{3})+(0,0,2,0,-\frac{2}{3})$\\
+Since, the augmented matrix is in Reduced Row Echelon Form, I've shown
+that the first three vectors, of $B$ are linearly independent, and
+that Span $B = U$. It follows that $B^\prime = B \backslash
+\{(0,0,2,-1)\} = \{(1,6,0,0,0),(0,0,0,3,-2),(0,0,3,0,-1)\}$
+is a basis for U.\\
+\newpage
+
+Now for part (b):
+
+Have $B^{\prime\prime}= B \cup \{e_i\}$, where $e_i$ are the standard
+basis vectors for $\mathbb{C}^5$ thinking of $\mathbb{C}$ as a vector
+space over itself---i.e the generator of $\mathbb{C}$ over
+$\mathbb{C}$ is $1$. There, are 5 $e_i$ vectors, and they span
+$\mathbb{C}^5$, and they're linearly independent, so they form a basis
+and the dimension of $\mathbb{C}^5$ over $\mathbb{C}$ is 5. The
+dimension of $U$ is 3. So, we only need to find 2 linearly independent
+vectors.\\
+
+$\begin{pmatrix}1 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\\\6 & 0 & 0 & 0 & 1 & 0
+  & 0 & 0\\\\0 & 0 & 3 & 0 & 0 & 1 & 0 & 0\\\\0 & 3 & 0 & 0 & 0 & 0 &
+  1 & 0\\\\0 & -2 & -1 & 0 & 0 & 0 & 0 & 1\end{pmatrix}$
+$\xrightarrow[]{\frac{1}{6}R_1+R_2 \mapsto R_2}$
+$\begin{pmatrix}1 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\\\0 & 0 & 0 & -6 & 1 &
+  0 & 0 & 0\\\\0 & 0 & 3 & 0 & 0 & 1 & 0 & 0\\\\0 & 3 & 0 & 0 & 0 & 0
+  & 1 & 0\\\\0 & -2 & -1 & 0 & 0 & 0 & 0 & 1\end{pmatrix}$\\
+$\xrightarrow[]{\frac{2}{3}R_4+R_5 \mapsto R_5}$
+$\begin{pmatrix}1 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\\\0 & 0 & 0 & -6 & 1 &
+  0 & 0 & 0\\\\0 & 0 & 3 & 0 & 0 & 1 & 0 & 0\\\\0 & 3 & 0 & 0 & 0 & 0
+  & 1 & 0\\\\0 & 0 & -1 & 0 & 0 & 0 & 2/3 & 1\end{pmatrix}$
+$\xrightarrow[]{3R_5+R_3 \mapsto R_3}$
+$\begin{pmatrix}1 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\\\0 & 0 & 0 & -6 & 1 &
+  0 & 0 & 0\\\\0 & 0 & 0 & 0 & 0 & 1 & 2 & 3\\\\0 & 3 & 0 & 0 & 0 & 0
+  & 1 & 0\\\\0 & 0 & -1 & 0 & 0 & 0 & 2/3 & 1\end{pmatrix}$\\
+$\xrightarrow[R_2 \rightharpoondown R_4,R_3 \rightharpoondown R_5]{R_4 \rightharpoonup R_2,R_5 \rightharpoonup R_3}$
+$\begin{pmatrix}1 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\\\0 & 3 & 0 & 0 & 0 & 0
+  & 1 & 0\\\\0 & 0 & -1 & 0 & 0 & 0 & 2/3 & 1\\0 & 0 & 0 & -6 & 1 & 0
+  & 0 & 0\\\\0 & 0 & 0 & 0 & 0 & 1 & 2 & 3\\\end{pmatrix}$
+$\xrightarrow[]{\frac{1}{6}R_5+R_1 \mapsto R_1}$
+$\begin{pmatrix}1 & 0 & 0 & 0 & \frac{1}{6} & 0 & 0 & 0\\\\0 & 3 & 0 &
+  0 & 0 & 0 & 1 & 0\\\\0 & 0 & -1 & 0 & 0 & 0 & 2/3 & 1\\0 & 0 & 0 &
+  -6 & 1 & 0 & 0 & 0\\\\0 & 0 & 0 & 0 & 0 & 1 & 2 & 3\\\end{pmatrix}$
+
+Immediately from the intermediate reduction we can see, that $e_1$ and
+$e_3$, are linearly independent with respect to $B^\prime$. So, my
+algorithm stops because I've hit the right dimension.\\ Now
+$B^{\prime\prime\prime} =
+\{(1,6,0,0,0),(0,0,0,3,-2),(0,0,3,0,-1),(1,0,0,0,0),(0,0,1,0,0)\}$ is
+indeed a basis for $\mathbb{C}^5$.
+\newpage
+
+Q4\quad Prove or disprove: there exists a basis $p_0 , p_1 , p_2 , p_3 of P_3(\mathbb{F})$ such
+that none of the polynomials $p_0 , p_1 , p_2 , p_3$ has degree 2.\\
+
+\uwave{pf\enskip .}\vspace{0.618cm}
+
+Well, consider the standard basis for $P_3(\mathbb{F})$, namely
+$\{1,t,t^2,t^3\}$. Now, take 4 linearly independent vectors in the
+span of that basis. For simplicity, one can see $t^3+2t^2$ and
+$t^3+t^2$ are not scalar multiples of each other, so they're pairwise
+linearly independent, both are not degree 2. Notice
+$t^3+2t^2-(t^3+t^2)=t^2$, and $2(t^3+t^2)-(t^3+2t^2)=t^3$. So the Span
+($t^3+2t^2,t^3+t^2$) = Span ($t^2,t^3$). Now, we only need to extend
+it to a basis for $P_3\mathbb{(F)}$, we add $1$ and $t$, which are not
+of degree 2. The original $t^3+2t^2$ and
+$t^3+t^2$ are already linearly independent, and $1$ is not a scalar
+multiple of them, since there's no scalar that can reduce a power, so
+we keep $1$. Similarly we keep $t$, $t$ is not a scalar
+multiple of any sum of them, because scalar multiplication cannot either increase or
+reduce a power. So, we reach the dimension of the ambient space, and
+we get a linearly independent set $B = \{t^3+2t^2,
+t^3+t^2,1,t\}$ that spans the space. Because we can write combinations
+of the first two as $t^2$ and $t^3$ respectively and take combinations of
+them with the two other vectors $1$ and $t$ to span all of
+$P_3\mathbb{(F)}$. So $B$ is a basis, and no element of $B$ has degree
+2.\\
+\begin{flushright}$\blacksquare$\end{flushright}\\
+
+Q5\quad Let $p_0 = 1+x, p_1 = 1+3x+x^2 , p_2 = 2x+x^2 , p_3 = 1+x+x^2 \in \mathbb{R}[x].$\\
+(a) Show that $p_0 , p_1 , p_2 , p_3$ spans the vector space $P_2(\mathbb{R}).$\\
+(b) Reduce the list $p_0 , p_1 , p_2 , p_3$ to a basis of
+$P_2(\mathbb{R}).$\\
+
+\uwave{pf\enskip .}\vspace{1.618cm}
+
+For part (a):\\
+$a(1+x)+b(1+3x+x^2)+c(2x+x^2)+d(1+x+x^2)=(a+b+d)1 + (a+3b+2c+d)x +
+(b+c+d)x^2$\\
+So, one can always choose $a,b,c,d$ ranging over the reals, such that
+$p_0 , p_1 , p_2 , p_3$ span all of $P_2(\mathbb{R}).$\\
+
+For part (b):\\
+$kp_0 \neq p_1$ because the degree of $p_0$ is less than that of
+$p_1$. And neither are equal to zero so we keep them.\\
+$p_1-p_0=  1+3x+x^2 -(1+x) = 2x+x^2 = p_2$, so we delete $p_2$.\\
+Now, consider linear combinations of $p_0$ and $p_1$ and compare them
+with $p_3$. That is suppose that $p_3$ is a linear combination of them:\\
+$a(1+x)+b(1+3x+x^2)=1+x+x^2 \Rightarrow (a+b)1 +(a+3b)x +bx^2 =
+1+x+x^2$\\
+$\Rightarrow \begin{cases} a+b=1 \\ a+3b =1 \\ b=1 \end{cases}$
+$\Rightarrow \begin{cases} a+b-b=1-1 \\ a+3b =1\\ b=1 \end{cases}$
+$\Rightarrow \begin{cases} a=0 \\ 0+3b =1 \\ b=1 \end{cases}$
+$\Rightarrow \begin{cases} a=0 \\ b =\frac{1}{3} \\ b=1 \end{cases}$\\
+So, $b$ has to equal two different numbers, so by contradiction $p_3$
+is not a linear combination of $p_0$ and $p_1$.\\ Since,
+$\{p_0,p_1,p_2\}$ is a linearly independent spanning set it is a basis
+for $P_2(\mathbb{R}).$\\
+\begin{flushright}$\blacksquare$\end{flushright}\\
+
+\newpage
+Q6\quad Suppose $v_1 , v_2 , v_3 , v_4$ is a basis of $V$ . Prove that
+$v_1 + v_2 , v_2 + v_3 , v_3 + v_4 , v_4$
+is also a basis of $V$.\\
+
+\uwave{pf\enskip .}\vspace{1.618cm}
+
+$k_1(v_1+v_2) + K_2(v_2+v_3) =0 \Rightarrow k_1v_1+ (k_1 + k_2)v_2 + k_2v_3 =0$
+Since, $v_1,v_2,v_3$ are linearly independent $k_1=k_1+k_2=k_2=0$, in
+particular both $k_1$ and $k_2$ are $0$. So $v_1+v_2$ is independent from
+$v_2+v_3$.\\
+Now compare them with $v_3+v_4$:\\
+$m_1(v_1+v_2) + m_2(v_2+v_3) + m_3(v_3+v_4)= m_1v_1+ (m_1 + m_2)v_2 +
+m_2v_3 + m_3(v_3+v_4)
+\\= m_1v_1+ (m_1 + m_2)v_2 +
+(m_2+m_3)v_3 + m_3v_4 = 0$\\
+So, by the same reasons  $m_1$ and $m_3$ are $0$. So,
+$0+(0+m_2)v_2+(m_2+0)v_3+0 =0$, so again by the independence of the
+$v_i$s $m_2$ must be $0$. So, $v_3+v_4$ is independent of the initial
+2.\\
+Finally,
+$n_1(v_1+v_2) + n_2(v_2+v_3) + n_3(v_3+v_4) +n_4v_4= n_1v_1+ (n_1 + n_2)v_2 +
+n_2v_3 + n_3(v_3+v_4) +n_4v_4
+\\= n_1v_1+ (n_1 + n_2)v_2 +
+(n_2+n_3)v_3 + (n_3 + n_4)v_4= 0$\\
+Clearly, $n_1=0 \Rightarrow 0+n_2 = 0 \Rightarrow 0+n_3 = 0
+\Rightarrow 0+n_4 =0$\\
+\begin{flushright}$\blacksquare$\end{flushright}\\
+
+
+
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
