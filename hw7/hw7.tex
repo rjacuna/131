@@ -24,7 +24,7 @@
 \begin{document}
 
 \begin{center}
-  \textbf{MATH} 131---\textbf{HOMEWORK} 6
+  \textbf{MATH} 131---\textbf{HOMEWORK} 7
 
   \color{red}R\color{teal}icardo
   \color{red}J\color{cyan}.
@@ -33,22 +33,70 @@
   \color{teal}(\color{red}862079740\color{teal})\color{black}
 \end{center}\vspace{1.618em}
 
-\paragraph{Q1}
-
+\paragraph{Q1} Suppose $U$,$V$ and $W$ are finite-dimensional vector
+spaces and $S \in \mathcal{L}(V,W)$ and $T \in
+\mathcal{L}(U,V)$. Prove that
+\[\text{dim(range}\enskip ST) \leq \text{min}\{\text{dim(range}\enskip
+  S), \text{dim(range}\enskip T)\}\]
 \uwave{Pf\enskip.}
 \vspace{0.618 em}
 
-\vspace{0.618 em}\\
+Let $U$,$V$ and $W$ be finite-dimensional vector spaces
+spaces and $S \in \mathcal{L}(V,W)$ and $T \in
+\mathcal{L}(U,V)$.
+
+$ST: U \rightarrow W$ defined by $ST(u) = S(T(u))$, $u \in U$
+
+range $ST$ = $ST(U) = S(T(U)) = S$$($range $T)$
+
+$\Rightarrow$ range $ST = \{\mathrm{w} \in W | \exists \mathrm{v} \in$ range $T:
+\mathrm{w} = S(v)\}$
+
+$\Rightarrow$ range $ST \trianglelefteq$ range $S$
+$\Rightarrow$ dim$($range $ST) \leq$ dim$($range $S)$ (1)
+
+Let $B_{T(U)} = \{v_i\}_{i=1}^n$ be a basis for range $T$,
+
+then
+$B_{S(T(U))} = \{S(v_i)\}_{i=1}^n$ spans range $ST$ (by Q2 HW6)
+
+If $T$ is surjective, then range $T = V$,
+
+so range $ST = S(V) =$ range $S$
+
+If $T$ is not surjective,
+then either $B_{S(T(U))}$ is linearly
+independent or not.
+
+If $B_{S(T(U))}$ is linearly independent, then dim$($range $ST)
+= n =$ dim$($ range $T)$
+
+If $B_{S(T(U))}$ is not linearly independent, then we can reduce it
+to a basis of range $ST$,
+
+accordingly dim$($range $ST) < n =$ dim$($ range $T)$
+
+In both cases, dim$($range $ST) \leq $ dim$($ range $T)$ (2)
+
+If dim$($range $S) <$ dim$($range $T)$, then  dim$($range $ST) \leq$
+dim$($range $S)$, which is always true by (1).
+
+If dim$($range $T) \leq$ dim$($range $S)$, then  dim$($range $ST) \leq$
+dim$($range $T)$, by (2).
+
+So, dim$($range $ST) \leq min\{$ dim$($ range $T)$, dim$($range
+$S)\}$.
+\vspace{0.618 em}
+
 $\blacksquare$
-
-
 
 \paragraph{Q2}
 
 \uwave{Pf\enskip.}
 \vspace{0.618 em}
 
-\vspace{0.618 em}\\
+\vspace{0.618 em}
+
 $\blacksquare$
 
 
@@ -58,7 +106,8 @@ $\blacksquare$
 \uwave{Pf\enskip.}
 \vspace{0.618 em}
 
-\vspace{0.618 em}\\
+\vspace{0.618 em}
+
 $\blacksquare$
 
 \paragraph{Q4}
@@ -66,7 +115,8 @@ $\blacksquare$
 \uwave{Pf\enskip.}
 \vspace{0.618 em}
 
-\vspace{0.618 em}\\
+\vspace{0.618 em}
+
 $\blacksquare$
 
 \paragraph{Q5}
@@ -74,7 +124,8 @@ $\blacksquare$
 \uwave{Pf\enskip.}
 \vspace{0.618 em}
 
-\vspace{0.618 em}\\
+\vspace{0.618 em}
+
 $\blacksquare$
 
 
@@ -83,7 +134,8 @@ $\blacksquare$
 \uwave{Pf\enskip.}
 \vspace{0.618 em}
 
-\vspace{0.618 em}\\
+\vspace{0.618 em}
+
 $\blacksquare$
 
 
