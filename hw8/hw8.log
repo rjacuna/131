@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.10.14)  25 FEB 2019 19:57
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.10.14)  25 FEB 2019 23:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**\input hw.tex
-(./hw.tex (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+**\input hw8.tex
+(./hw8.tex (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
@@ -824,8 +824,8 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@inbox=\box47
 \enitdp@description=\count266
 )
-No file hw.aux.
-\openout1 = `hw.aux'.
+No file hw8.aux.
+\openout1 = `hw8.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
 LaTeX Font Info:    ... okay on input line 24.
@@ -907,14 +907,14 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 31.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-] (./hw.aux) ) 
+] (./hw8.aux) ) 
 Here is how much of TeX's memory you used:
  16699 strings out of 493007
- 331320 string characters out of 6136718
- 498729 words of memory out of 5000000
+ 331327 string characters out of 6136718
+ 498732 words of memory out of 5000000
  20578 multiletter control sequences out of 15000+600000
  533082 words of font info for 53 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 39i,6n,68p,10411b,256s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,6n,68p,10412b,256s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on hw.pdf (1 page).
+Output written on hw8.pdf (1 page).
