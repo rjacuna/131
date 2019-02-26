@@ -43,49 +43,45 @@ spaces and $S \in \mathcal{L}(V,W)$ and $T \in
 
 Let $U$,$V$ and $W$ be finite-dimensional vector spaces
 spaces and $S \in \mathcal{L}(V,W)$ and $T \in
-\mathcal{L}(U,V)$.
+\mathcal{L}(U,V)$.\\
 
 $ST: U \rightarrow W$ defined by $ST(u) = S(T(u))$, $u \in U$
 
-range $ST$ = $ST(U) = S(T(U)) = S$$($range $T)$
+range $ST$
+$\stackrel{\text{def. range}}{=\joinrel=\joinrel=\joinrel=\joinrel=}$
+$ST(U) \stackrel{\text{def.}ST}{=\joinrel=\joinrel=} S(T(U))$
+$\stackrel{\text{def. range}}{=\joinrel=\joinrel=\joinrel=\joinrel=}$
+$S$$($range $T)$ $(-1)$
 
 $\Rightarrow$ range $ST = \{\mathrm{w} \in W | \exists \mathrm{v} \in$ range $T:
 \mathrm{w} = S(v)\}$
 
 $\Rightarrow$ range $ST \trianglelefteq$ range $S$
 
-$\Rightarrow$ dim$($range $ST) \leq$ dim$($range $S)$ (1)
+$\Rightarrow$ dim$($range $ST) \leq$ dim$($range $S)$ $(0)$\\
 
-Let $B_{T(U)} = \{v_i\}_{i=1}^n$ be a basis for range $T$,
+$S^\prime:$ range $T \rightarrow$ range $ST$ defined by
+$S^\prime(v) = S(v)$, $v \in$ range $T$
 
-then
-$B_{S(T(U))} = \{S(v_i)\}_{i=1}^n$ spans range $ST$ (by Q2 HW6)
+FTLA $\Rightarrow$ dim$($range $T) =$ dim$($null $S^\prime)$ +
+dim$($range $S^\prime)$ $(1)$
 
-If $T$ is surjective, then range $T = V$,
+$\Rightarrow$ range $S^\prime
+\stackrel{\text{def. range}}{=\joinrel=\joinrel=\joinrel=\joinrel=}
+S^\prime($range $T)$
+$\stackrel{\text{def.}S^\prime}{=\joinrel=\joinrel=} S($range $T)
+\stackrel{(-1)}{=\joinrel=} $ range $ST$ $(2)$
 
-so range $ST = S(V) =$ range $S$
+$(1)$ and $(2)$ $\Rightarrow$ dim$($range $T) =$ dim$($null $S^\prime)$ + dim$($range
+$ST)$
 
-If $T$ is not surjective,
-then either $B_{S(T(U))}$ is linearly
-independent or not.
+$\Rightarrow$ dim$($range $ST) =$ dim$($range $T)$ $-$ dim$($null
+$S^\prime)$
 
-If $B_{S(T(U))}$ is linearly independent, then dim$($range $ST)
-= n =$ dim$($ range $T)$
+$\Rightarrow$ dim$($range $ST) \leq$ dim$($range $T)$ $(3)$\\
 
-If $B_{S(T(U))}$ is not linearly independent, then we can reduce it
-to a basis of range $ST$,
 
-accordingly dim$($range $ST) < n =$ dim$($ range $T)$
-
-In both cases, dim$($range $ST) \leq $ dim$($ range $T)$ (2)
-
-If dim$($range $S) <$ dim$($range $T)$, then  dim$($range $ST) \leq$
-dim$($range $S)$, which is always true by (1).
-
-If dim$($range $T) \leq$ dim$($range $S)$, then  dim$($range $ST) \leq$
-dim$($range $T)$, by (2).
-
-So, dim$($range $ST) \leq min\{$ dim$($ range $T)$, dim$($range
+$(0)$ and $(3)$ $\Rightarrow$ dim$($range $ST) \leq min\{$ dim$($ range $T)$, dim$($range
 $S)\}$.
 \vspace{0.618 em}
 
@@ -102,21 +98,21 @@ on $V$.
 
 $\forall V , W :$ dim$(V) \in \mathbb{N}: T\in \mathcal{L}(V, W)$
 
-$(\Rightarrow)$ Assume $T$ is injective
+$(\Rightarrow)$ Assume $T$ is injective $(-4)$
 
-$\Rightarrow$ null $T$ $= \{0\}$
+FTLA $\Rightarrow$ dim$(V) =$ dim$($null $T) +$ dim$($range $T)$ $(-3)$
 
-$\Rightarrow$ dim$(V) =$ dim$($null $T) +$ dim$($range $T)$
+$(-4)$ $\Rightarrow$ null $T$ $= \{0\}$
 
-$=$ dim$(\{0\}) +$ dim$($range $T)$
+$\Rightarrow$ dim$($null $T) = 0$ $(-2)$
 
-$=$ $ 0$ $+$ dim$($range $T) = $ dim$($range $T)$
+$(-3)$ and $(-2)$ $\Rightarrow$ dim$(V) =$ $0$ $+$ dim$($range $T)$ $(-1)$
 
-$\Rightarrow$ dim$(V) = m =$ dim$($range $T)$ (0)
+$\Rightarrow$ dim$(V) = $ dim$($range $T)$ $(0)$
 
 Let $B_0 = \{v_i\}_{i=1}^m$, be a basis for $V$,
 
-then $B = \{T(v_i)=w_i\}_{i=1}^m$, is a basis for range $T$ (by 0)
+then $B = \{T(v_i)=w_i\}_{i=1}^m$, is a basis for range $T$ (by $(0)$)
 
 One can extend $B$ to a basis $B^\prime = \{w_i\}_{i=1}^n$, $m \leq n$
 
