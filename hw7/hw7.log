@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.10.14)  24 FEB 2019 14:13
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.10.14)  24 FEB 2019 22:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -907,14 +907,46 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 31.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-] [2] (./hw7.aux) ) 
+] [2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 258--261
+
+ []
+
+./hw7.tex:267: Undefined control sequence.
+l.267 $\Rightarrow [\lamda
+                           S]_{\mathcal{F} \leftarrow \mathcal{E}} =$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./hw7.tex:269: Undefined control sequence.
+l.269 \lambda a_{11}&\cdots & \lamda
+                                     a_{1n}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./hw7.tex:293: Undefined control sequence.
+l.293 \lambda a_{11}&\cdots & \lamda
+                                     a_{1n}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[4] [5] (./hw7.aux) ) 
 Here is how much of TeX's memory you used:
- 16706 strings out of 493007
- 331467 string characters out of 6136718
- 504732 words of memory out of 5000000
- 20581 multiletter control sequences out of 15000+600000
+ 16707 strings out of 493007
+ 331472 string characters out of 6136718
+ 511732 words of memory out of 5000000
+ 20582 multiletter control sequences out of 15000+600000
  533098 words of font info for 55 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 39i,6n,68p,10412b,256s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,8n,68p,10412b,264s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on hw7.pdf (2 pages).
+Output written on hw7.pdf (5 pages).

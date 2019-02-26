@@ -36,7 +36,7 @@
 \paragraph{Q1} Suppose $U$,$V$ and $W$ are finite-dimensional vector
 spaces and $S \in \mathcal{L}(V,W)$ and $T \in
 \mathcal{L}(U,V)$. Prove that
-\[\text{dim(range}\enskip ST) \leq \text{min}\{\text{dim(range}\enskip
+\[\text{dim(range}\enskip ST) \leq min\{\text{dim(range}\enskip
   S), \text{dim(range}\enskip T)\}\]
 \uwave{Pf\enskip.}
 \vspace{0.618 em}
@@ -53,6 +53,7 @@ $\Rightarrow$ range $ST = \{\mathrm{w} \in W | \exists \mathrm{v} \in$ range $T:
 \mathrm{w} = S(v)\}$
 
 $\Rightarrow$ range $ST \trianglelefteq$ range $S$
+
 $\Rightarrow$ dim$($range $ST) \leq$ dim$($range $S)$ (1)
 
 Let $B_{T(U)} = \{v_i\}_{i=1}^n$ be a basis for range $T$,
@@ -90,54 +91,275 @@ $S)\}$.
 
 $\blacksquare$
 
-\paragraph{Q2}
+
+\newpage
+\paragraph{Q2} Suppose that $V$ is finite-dimensional and $T\in \mathcal{L}(V, W )$. Prove
+that $T$ is injective if and only if there exists $S\in \mathcal{L}(W,V)$ such that $ST$ is the identity map
+on $V$.
 
 \uwave{Pf\enskip.}
 \vspace{0.618 em}
 
-\vspace{0.618 em}
+$\forall V , W :$ dim$(V) \in \mathbb{N}: T\in \mathcal{L}(V, W)$
 
+$(\Rightarrow)$ Assume $T$ is injective
+
+$\Rightarrow$ null $T$ $= \{0\}$
+
+$\Rightarrow$ dim$(V) =$ dim$($null $T) +$ dim$($range $T)$
+
+$=$ dim$(\{0\}) +$ dim$($range $T)$
+
+$=$ $ 0$ $+$ dim$($range $T) = $ dim$($range $T)$
+
+$\Rightarrow$ dim$(V) = m =$ dim$($range $T)$ (0)
+
+Let $B_0 = \{v_i\}_{i=1}^m$, be a basis for $V$,
+
+then $B = \{T(v_i)=w_i\}_{i=1}^m$, is a basis for range $T$ (by 0)
+
+One can extend $B$ to a basis $B^\prime = \{w_i\}_{i=1}^n$, $m \leq n$
+
+Define, $S: W \rightarrow V$ by $\begin{cases}
+  S(w_i) = v_i, 1 \leq i \leq m\\
+  S(w_i) = 0, m < i \leq n
+\end{cases}$
+
+$ST(v_i) = S(T(v_i)) = S(w_i) = v_i = id_V(v_i), 1 < i < m$
+
+$\Rightarrow \exists S \in \mathcal{L}(W,V): ST = id_V$
+
+$(\Leftarrow)$ Assume $\exists S \in \mathcal{L}(W,V): ST = id_V$
+
+$\forall v_x,v_y \in V :$ $T(v_x) = T(v_y)$
+
+$\Rightarrow S(T(v_x)) = S(T(v_y))$
+
+$\Rightarrow ST(v_x) = ST(v_y)$
+
+$\Rightarrow id_V(v_x) = id_V(v_y)$
+
+$\Rightarrow v_x = v_y$
+
+$\Rightarrow$ $T$ is injective
+
+So,
+
+$T$ is injective $\Leftrightarrow \exists S \in \mathcal{L}(W,V):
+ST = id_V$
+
+\vspace{0.618 em}
 $\blacksquare$
 
 
+\newpage
 
-\paragraph{Q3}
+\paragraph{Q3} Suppose $T \in L(P_2(\mathbb{R}), P_4(\mathbb{R}))$ is
+the linear map defined by
+
+\[T p = x^2 p.\]
+
+(1) Find the matrix of $T$ with respect to the standard basis.
+
+$\mathcal{E} = \{1, x, x^2\}$
+
+$\mathcal{F} = \{1, x, x^2, x^3, x^4\}$
+
+$T 1 = x^2 1 = x^2 \begin{bmatrix} 0\\ 0 \\ 1 \\ 0 \\ 0\\\end{bmatrix}_{\mathcal{F}}$
+$T x = x^2 x = x^3 =\begin{bmatrix} 0\\ 0 \\ 0 \\ 1 \\
+  0\\\end{bmatrix}_{\mathcal{F}}$
+$T x^2 = x^2 x^2 = x^4 = \begin{bmatrix} 0\\ 0 \\ 0 \\ 0 \\
+  1\\\end{bmatrix}_{\mathcal{F}}$
+
+$\Rightarrow [T]_{\mathcal{F} \leftarrow \mathcal{E}} =
+\begin{bmatrix} 0& 0 &0 \\ 0&0&0 \\ 1&0&0 \\ 0&1&0 \\ 0&0&1\\\end{bmatrix}$
+
+(2) Verify the fundamental theorem of linear maps.
+
+range $T =$ span $\{x^2,x^3,x^4\}$
+
+null $T =$ span $\{0\}$, since $x^2p = 0$, has only solution $p = 0,
+\forall x$
+
+dim $P_2(\mathbb{R}) = |\mathcal{E}| = 3 = 0 + 3 =$ dim $\{0\} +$ dim
+$\{x^2,x^3,x^4\}$ $\checkmark$
+
+\newpage
+\paragraph{Q4} Let $S, T ∈ \mathcal{L}(V, W)$ and $λ ∈ F$. Let $\mathcal{E} = \{e_1 , ... , e_n\}$ be a basis
+of $V$, and $\mathcal{F} = \{f_1 , ... , f_m \}$ be a basis of $W$. Show that there are identities of matrices as
+following:
+\[[S + T ]_{\mathcal{F} \leftarrow \mathcal{E}} = [S]_{\mathcal{F}
+    \leftarrow \mathcal{E}} + [T ]_{\mathcal{F} \leftarrow \mathcal{E}},\]
+and
+\[[λS]_{\mathcal{F} \leftarrow \mathcal{E}} = λ[S]_{\mathcal{F}
+    \leftarrow \mathcal{E}}.\]
 
 \uwave{Pf\enskip.}
 \vspace{0.618 em}
 
-\vspace{0.618 em}
+Let $S, T ∈ \mathcal{L}(V, W)$ and $λ ∈ \mathbb{F}$. Let $\mathcal{E} = \{e_1 , ... , e_n\}$ be a basis
+of $V$, and $\mathcal{F} = \{f_1 , ... , f_m \}$be a basis of $W$.
 
+$\exists a_{ji} \in \mathbb{F}: S(e_i) = \sum_{j=1}^ma_{ji}f_j$
+$\Rightarrow [S]_{\mathcal{F} \leftarrow \mathcal{E}} =
+$
+$\begin{bmatrix}
+a_{11}&\cdots & a_{1n}\\
+\vdots&\ddots&\vdots\\
+a_{m1}&\cdots& a_{mn}
+\end{bmatrix}
+$
+
+and
+
+$\exists b_{ji} \in \mathbb{F}: T(e_i) = \sum_{j=1}^mb_{ji}f_j$
+$\Rightarrow [T]_{\mathcal{F} \leftarrow \mathcal{E}} =
+\begin{bmatrix}
+b_{11}&\cdots & b_{1n}\\
+\vdots&\ddots&\vdots\\
+b_{m1}&\cdots& b_{mn}
+\end{bmatrix}
+$
+
+$\Rightarrow [S]_{\mathcal{F} \leftarrow \mathcal{E}} + [T]_{\mathcal{F} \leftarrow \mathcal{E}} =$
+$\begin{bmatrix}
+a_{11}&\cdots & a_{1n}\\
+\vdots&\ddots&\vdots\\
+a_{m1}&\cdots& a_{mn}
+\end{bmatrix}
+$$ + $
+$\begin{bmatrix}
+b_{11}&\cdots & b_{1n}\\
+\vdots&\ddots&\vdots\\
+b_{m1}&\cdots& b_{mn}
+\end{bmatrix}
+$$ = $
+$\begin{bmatrix}
+a_{11} + b_{11} &\cdots & a_{1n} + b_{1n}\\
+\vdots&\ddots&\vdots\\
+a_{m1} + b_{m1}&\cdots& a_{mn} + b_{mn}
+\end{bmatrix}
+$
+
+
+
+
+$(S+T)(e_i) := S(e_i) + T(e_i) = \sum_{j=1}^ma_{j,i}f_j +
+\sum_{j=1}^mb_{j,i}f_j = \sum_{j=1}^m(a_{j,i} + b_{j,i})f_j$
+
+
+$\Rightarrow [S+T]_{\mathcal{F} \leftarrow \mathcal{E}} =$
+$\begin{bmatrix}
+a_{11} + b_{11} &\cdots & a_{1n} + b_{1n}\\
+\vdots&\ddots&\vdots\\
+a_{m1} + b_{m1}&\cdots& a_{mn} + b_{mn}
+\end{bmatrix}
+$
+
+$\Rightarrow [S + T ]_{\mathcal{F} \leftarrow \mathcal{E}} = [S]_{\mathcal{F}
+    \leftarrow \mathcal{E}} + [T ]_{\mathcal{F} \leftarrow
+    \mathcal{E}}$\\
+
+$\lambda S(e_i) = \lambda \sum_{j=1}^ma_{j,i}f_j = \sum_{j=1}^m
+\lambda a_{j,i}f_j$
+
+Also,
+
+$\Rightarrow [\lamda S]_{\mathcal{F} \leftarrow \mathcal{E}} =$
+$\begin{bmatrix}
+\lambda a_{11}&\cdots & \lamda a_{1n}\\
+\vdots&\ddots&\vdots\\
+\lambda a_{m1}&\cdots& \lambda a_{mn}
+\end{bmatrix}
+$
+
+and
+
+$[S]_{\mathcal{F} \leftarrow \mathcal{E}} =$
+$\begin{bmatrix}
+a_{11}&\cdots & a_{1n}\\
+\vdots&\ddots&\vdots\\
+a_{m1}&\cdots& a_{mn}
+\end{bmatrix}
+$
+$\Rightarrow \lambda [S]_{\mathcal{F} \leftarrow \mathcal{E}} =$
+$\lambda
+\begin{bmatrix}
+a_{11}&\cdots & a_{1n}\\
+\vdots&\ddots&\vdots\\
+a_{m1}&\cdots& a_{mn}
+\end{bmatrix}
+$$ = $
+$\begin{bmatrix}
+\lambda a_{11}&\cdots & \lamda a_{1n}\\
+\vdots&\ddots&\vdots\\
+\lambda a_{m1}&\cdots& \lambda a_{mn}
+\end{bmatrix}
+$
+
+$\Rightarrow [λS]_{\mathcal{F} \leftarrow \mathcal{E}} = λ[S]_{\mathcal{F}
+    \leftarrow \mathcal{E}}$
+
+
+\vspace{0.618 em}
 $\blacksquare$
 
-\paragraph{Q4}
+\newpage
+\paragraph{Q5} Suppose $D ∈ \mathcal{L}(P_3(\mathbb{R}),
+P_2(\mathbb{R}))$ is the differential map defined by \[Dp = p^\prime\]
 
-\uwave{Pf\enskip.}
-\vspace{0.618 em}
+Find a basis $\mathcal{E}$ of $P_3(\mathcal{R})$ and a basis
+$\mathcal{F}$ of $P_2(\mathcal{R})$ such that the matrix of D with
+respect  to these bases is
 
-\vspace{0.618 em}
-
-$\blacksquare$
-
-\paragraph{Q5}
-
-\uwave{Pf\enskip.}
-\vspace{0.618 em}
-
-\vspace{0.618 em}
-
-$\blacksquare$
+\[ [D]_{\mathcal{F} \leftarrow \mathcal{E}} =
+  \begin{pmatrix}
+    1 & 0& 0& 0\\
+    0 & 1& 0& 0\\
+    0 & 0& 1& 0
+  \end{pmatrix}
+\]
 
 
-\paragraph{Q6}
+$Dx = 1$, $D\frac{1}{2}x^2 = x$, $D\frac{1}{3}x^3 = x^2$, $D1 = 0$
 
-\uwave{Pf\enskip.}
-\vspace{0.618 em}
+So, $\mathcal{E} = \{x,\frac{1}{2}x^2,\frac{1}{3}x^3,1\}$, and
+$\mathcal{F} = \{1,x,x^2\}$,
+or $\mathcal{E} = \{x,x^2,x^3,1\}$, and
+$\mathcal{F} = \{1,2x,3x^2\}$,
 
-\vspace{0.618 em}
+or
+$\mathcal{E} = \{2000 + x, 2000 + x^2, 2000 + x^3,5\}$, and
+$\mathcal{F} = \{1,2x,3x^2\}$
 
-$\blacksquare$
+Really, bunch, infinitely many.
 
+
+\paragraph{Q6} Find linear maps $S, T ∈ \mathcal{L}(\mathbb{R}^2)$
+such that $ST \neq TS$.
+
+$S , T \in \mathcal{L}(\mathbb{R}^2): \{e_1,e_2\}$ is the standard
+basis for $\mathbb{R}^2$
+
+$S: \mathbb{R}^2 \rightarrow \mathbb{R}^2$ defined by
+
+$S(e_1) = e_1$
+
+$S(e_2) = 2e_2$
+
+$T: \mathbb{R}^2 \rightarrow \mathbb{R}^2$ defined by
+
+$T(e_1) = e_2$
+
+$T(e_2) = 2e_1$
+
+$\Rightarrow ST(e_1) = S(T(e_1)) = S(e_2) = 2e_2$ and $ST(e_2) =
+S(T(e_2)) = S(2e_1) = 2S(e_1)= 2e_1$
+
+$\Rightarrow TS(e_1) = T(S(e_1)) = T(e_1) = e_2$ and $TS(e_2) =
+T(S(e_2)) = T(2e_2) = 2T(e_2)= 2(2e_1) = 4e_1$
+
+$\Rightarrow ST \neq TS$
 
 \end{document}
 
