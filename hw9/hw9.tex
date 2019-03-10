@@ -1,0 +1,307 @@
+\documentclass{article}
+\usepackage{fontspec}
+\usepackage{xcolor}
+
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{unicode-math}
+\usepackage[makeroom]{cancel}
+
+\usepackage[normalem]{ulem}
+
+\setmainfont{Times New Roman}
+\setmathfont{Latin Modern Math}
+
+\setlength\parindent{0em}
+\setlength\parskip{0.618em}
+\usepackage[a4paper,lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+
+\usepackage{enumitem}
+
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\DeclareMathOperator*{\bigplus}{\scalerel*{+}{\textstyle\sum}}
+\usepackage{scalerel}
+
+\begin{document}
+
+\begin{center}
+  \textbf{MATH} 131---\textbf{HOMEWORK} n
+
+  \color{red}R\color{teal}icardo
+  \color{red}J\color{cyan}.
+  \color{red}A\color{teal}cu$\color{red}{\widetilde{\color{teal}\text{n}}}$\color{teal}a\color{black}
+
+  \color{teal}(\color{red}862079740\color{teal})\color{black}
+\end{center}\vspace{1.618em}
+
+``$\guillemotright n \guillemotleft$'' $:= $ ``Statement number $n$''
+
+\paragraph{Q1} Suppose $V$ is finite-dimensional, with dim $V = n ≥ 1$. Prove that
+there exist 1–dimensional subspaces $U_1 , ... , U_n$ of $V$ such that
+\[V = U_1 ⊕ ··· ⊕ U_n.\]
+
+\uwave{Pf\enskip.}
+\vspace{0.618 em}
+
+$\forall V:$ dim $V = n \geq 1, n \in \mathbb{N}$
+
+Let $\mathcal{U}:=\{u_i\}_{i=1}^n$ be a basis of $V$
+
+$\forall u_i \in \mathcal{U}: U_i :=$ span$(\{u_i\})$
+
+$\{u_i\}$ is a basis for $U_i$ by construction $\Rightarrow$ dim $U_i
+= |\{u_i\}| = 1$
+
+if $i = j$, then $U_i \cap U_j = U_i$
+
+if $i \neq j$, then $U_i \cap U_j =$ span $(\{u_i\}) \cap$ span
+$(\{u_j\})$
+
+$= \{v \in V| v \in
+$span $(\{u_i\})$ and $ v \in$ span $(\{u_j\})\}$
+
+$\Rightarrow \exists a,b\in \mathbb{F}: v = a u_i = b u_j$ $\Rightarrow a u_i - b u_j = 0$
+
+Since, $u_i, u_j \in \mathcal{U}$ and $\mathcal{U}$  is a basis for
+$V$.
+
+It follows that,
+$a = b = 0$ in the dependence test equation above.
+
+$\Rightarrow v = 0 \Rightarrow U_i \cap U_j = \{0\}$
+
+Since the spaces intersect pairwise on $\{0\}$ as shown,
+
+and $\forall
+i: 0 \in
+U_i$, because $U_i =$ span $(\{u_i\})$.
+
+It follows $\bigcap\limits_{i=1}^n U_i = \{0\}$
+$\Rightarrow \bigplus\limits_{i=1}^n U_i = \bigoplus\limits_{i=1}^n U_i$
+
+Now, by definition
+
+$\bigplus\limits_{i=1}^n U_i = \{\sum_{i=1}^n
+s_i|\enskip s_i \in U_i\}$
+
+$=\{\sum_{i=1}^n s_i |\enskip s_i \in$ span $(\{u_i\})\}$
+$=\{\sum_{i=1}^n a_iu_i|\enskip a_i \in \mathbb{F}\}$
+$=$ span $(\mathcal{U}) = V$
+
+So, to sum up. for any basis, the span of each singleton subset of the
+basis is one dimensional. The intersection of the generated spans is
+$\{0\}$, because pairwise it is so, so their sum as subspaces is a direct
+sum. And, their direct sum spans the ambient space. So, there exist
+1-dimensional subspaces of $V$ such that
+\[V = U_1 ⊕ ··· ⊕ U_n.\]
+
+\vspace{0.618 em}
+$\blacksquare$
+
+\newpage
+\paragraph{Q2} Suppose that $U$ and $V$ are subspaces of $\mathbb{R}^8$ such that dim $U = 3$,
+dim $W = 5$, and $U + W = \mathbb{R}^8$. Prove that $\mathbb{R}^8 = U ⊕ W$.
+
+\uwave{Pf\enskip.}
+\vspace{0.618 em}
+
+$\forall$ $U,$ $V \trianglelefteq$ $\mathbb{R}^8:$ dim $U = 3$,
+dim $W = 5$, and $U + W = \mathbb{R}^8$
+
+Since, dim $(\mathbb{R}^8) = 8$ and $8 \in \mathbb{N}$
+
+dim $U + W =$ dim $U +$  dim $W +$  dim $U \cap W$ (by Theorem 2
+in 2C)
+
+$\Rightarrow 8 = 3 + 5 +$ dim $U \cap W$
+
+$\Rightarrow 8 = 8 +$ dim $U \cap W$
+
+$\Rightarrow 8 -8 = $ dim $U \cap W$
+
+$\Rightarrow 0 = $ dim $U \cap W$
+
+$\Rightarrow$ $U \cap W = \{0\}$
+
+$\Rightarrow$ $\mathbb{R}^8 = U \oplus W$
+
+\vspace{0.618 em}
+$\blacksquare$
+
+
+
+\paragraph{Q3} Prove or give a counterexample:
+if $ U_1 , U_2 , W$ are subspaces of $V$ such that
+\[U_1 ⊕ W = U_2 ⊕ W,\]
+then $U_1 = U_2$.\\
+
+
+span $(\{(1,0)\}) +$ span $(\{(0,1)\}) = \mathbb{R}^2$
+
+and
+
+span $(\{(1,0)\}) \cap$ span $(\{(0,1)\}) = \{(0,0)\}$ Clearly, just
+look at the intersection of the x and the y axes
+
+$\Rightarrow$ span $(\{(1,0)\}) \oplus$ span $(\{(0,1)\}) =
+\mathbb{R}^2$ $\guillemotright -1 \guillemotleft$\\
+
+span $(\{(1,-1)\}) +$ span $(\{(0,1)\}) = \mathbb{R}^2$
+
+span $(\{(1,-1)\}) \cap$ span $(\{(0,1)\}) = \{ v \in \mathbb{R}^2
+|\enskip v \in$ span $(\{(-1,1)\})$ and $v \in$ span $(\{(0,1)\})\}$
+
+$\Rightarrow$ $\exist a,b\in \mathbb{R}: v = b(-1,1) = a(0,1)$
+
+$\Rightarrow$ $-b=0$ and $b = a$ $\Rightarrow v = (0,0)$
+
+$\Rightarrow$ span $(\{(-1,1)\}) \cap$ span $(\{(0,1)\}) = \{(0,0)\}$
+
+$\Rightarrow$ span $(\{(1,-1)\}) \oplus$ span $(\{(0,1)\}) = \mathbb{R}^2$ $\guillemotright 1 \guillemotleft$
+
+$\guillemotright -1 \guillemotleft$ and $\guillemotright 1
+\guillemotleft$ $\Rightarrow$ span $(\{(1,-1)\}) \oplus $span
+$(\{(0,1)\}) =$ span $(\{(1,0)\}) \oplus$ span $(\{(0,1)\})$
+
+$(-1,1) \notin$ span $(\{(1,0)\})$ $\Rightarrow$ span $(\{(1,0)\})
+\neq$ span $(\{(-1,1)\})$
+
+So, by counterexample Q3 is false
+
+\newpage
+\paragraph{Q4} Suppose $U = \{(x, x, y, y) ∈ \mathbb{R}^4 | x, y ∈ \mathbb{R}\}$. Find a subspace $W$ of $\mathbb{R}^4$ such that
+\[\mathbb{R}^4 = U ⊕ W\].
+
+
+For this problem I use facts from Linear Algebra Done Right (LADR), by
+Sheldon Axler.
+
+Define $<\mathbf{x},\mathbf{y}> := \sum_{i=1}^4x_iy_i$.
+We say that if $<\mathbf{x},\mathbf{y}> = 0$, $\mathbf{x}$ is orthogonal to
+$\mathbf{y}$ (by 6.11 in LADR).
+
+$U^\perp = \{v\in V| < v, u> = 0$ for every $u \in U\}$ is called the
+orthogonal complement of $U$ (by 6.45 in
+LADR)
+
+It's easy to see that, $U =$ span$(\{(1,1,0,0),(0,0,1,1)\})$
+
+Form the coefficient matrix of $U$, with the elements of $U$ as row
+vectors as such:\\
+$\begin{pmatrix}
+  1&1&0&0\\
+  0&0&1&1\\
+\end{pmatrix}$
+
+This coefficient matrix is already in RREF, so I can read it's
+nullspace.
+
+From
+column two, I read $(-1,1,0,0)$, and from column 4, I read $(0,0,-1,1)$.
+
+I claim $U^\perp =$ span$(\{(-1,1,0,0),(0,0,-1,1)\})$,\\
+since $\{(1,1,0,0),(0,0,1,1)\}$ and
+$\{(-1,1,0,0),(0,0,-1,1)\}$\\ are bases for $U$ and $U^\perp$
+respectively. It's enough to check that:
+
+$<(1,1,0,0),(-1,1,0,0)> = 0$ and\\
+$<(0,0,1,1),(-1,1,0,0)> = 0$ and\\
+$<(1,1,0,0),(0,0,-1,1)> =
+0$ and\\
+$<(0,0,1,1),(0,0,-1,1)> = 0$.
+
+So, $\mathbb{R}^4 = U \oplus U^\perp$  (by 6.47 in LADR)
+
+
+
+\paragraph{Q5} Let $U = \{p ∈ P_4(\mathbb{R}) : p^{\prime\prime}(4) = 0\}$. (In homework 5, we have
+computed a basis of $U$ and extended it to a basis of $P_4(\mathbb{R})$).
+Find a subspace $W$ of $P_4(\mathbb{R})$ such that $P_4(\mathbb{R}) = W ⊕ U$. Justify your answer.
+
+I dont' like my answer, so I'm using the bases Susan used in class:
+
+$\mathcal{U} = \{1,t-4,(t-4)^3,(t-4)^4\}$ a basis for $U$\\
+$\mathcal{P} = \{1,t-4,(t-4)^2,(t-4)^3,(t-4)^4\}$ a basis for
+$P_4(\mathbb{R})$
+
+Let $\mathcal{W} = \mathcal{P} \backslash \mathcal{U} = \{(t-4)^2\}$:
+$W$ = span $\mathcal{W}$
+
+$W \cap U = \{p \in P_4(\mathbb{R})| p \in W$ and $p \in U\}$\\
+$\Rightarrow \exists a_i \in \mathbb{R}: p = a_2(t-4)^2= a_0(1)+a_1(t-4)+a_3(t-4)^3+a_4(t-4)^4$\\
+$\Rightarrow 0 = -a_2(t-4)^2+ a_0(1)+a_1(t-4)+a_3(t-4)^3+a_4(t-4)^4$
+
+Since, $\mathcal{P}$ is a basis for $P_4(\mathbb{R})$, all $a_i$ must
+be $0$ in the dependence test equation above.
+
+So, $p=0 \Rightarrow W \cap U = \{0\}$ $\guillemotright 23 \guillemotleft$
+
+Since, adding linear combinations of vectors
+in $\mathcal{W}$ to linear combinations of vectors in $\mathcal{U}$,\\
+you get linear combinations of vectors in $\mathcal{P}$.\\
+$W + U =$ span $\mathcal{W} +$  span $\mathcal{U} =$ $P_4(\mathbb{R})$ $\guillemotright 32 \guillemotleft$
+
+
+$\guillemotright 23 \guillemotleft$ and $\guillemotright 32
+\guillemotleft$ $\Rightarrow$ $P_4(\mathbb{R}) =$  $W \oplus U$
+
+\newpage
+\paragraph{Q6} Suppose $\phi ∈ \mathcal{L}(V, \mathbb{F})$. Suppose $u
+∈ V$ is not in Null $\phi$. Let
+$U =$ Span$(u)$. Prove that
+
+\[V = \text{Null } \phi \oplus U\]
+
+\uwave{Pf\enskip.}
+\vspace{0.618 em}
+
+Suppose $\phi ∈ \mathcal{L}(V, \mathbb{F})$. Suppose $u
+∈ V$ is not in Null $\phi$. Let
+$U =$ Span$(u)$.
+
+Null $\phi \cap U = \{v \in V| v \in$ Null$\phi$ and $v \in U\}$
+
+Let $b,c \in \mathbb{F},$ and $u^\prime \in$ Null $\phi: v= bu^\prime= cu$\\
+$\Rightarrow$ $\phi(bu^\prime)= \phi(cu)$\\
+$\Rightarrow$ $b\phi(u^\prime) = b0 = 0 = c\phi(u)$\\
+$u \notin$ Null $\phi$ $\Rightarrow \phi(u) \neq 0 \Rightarrow c = 0
+\Rightarrow v = 0$
+
+Null $\phi \cap U = \{0\}$
+
+Range $\phi =$ $\phi(V) = \{x \in \mathbb{F}| \phi(v) = x, v \in V\}$
+
+Either $v = au$ or $v \neq au$, some $a \in \mathbb{F}$\\
+If $v=au$, then $\phi(v)=\phi(au) = a\phi(u) \neq 0$, whenever $a \neq 0$, since $u \notin$ Null
+$\phi$\\
+If $v \neq au$, then $\phi(v) = 0$, since $v \in$ Null $\phi$\\
+So, Range $\phi$ $= \phi(V) =$ span$(\{\phi(u)\})$ $\Rightarrow$
+$\phi^{-1}(\mathbb{F}) =$ $U$\\
+$\Rightarrow$ dim$($Range $\phi) =$ dim$(U)$
+
+dim$(V) =$ dim$($Null $ \phi) +$ dim$($Range $ \phi)$ (by FTLA)\\
+$\Rightarrow$ dim$(V) =$ dim$($Null $ \phi) +$ dim$(U)$
+
+dim$($Null $\phi + U) =$ dim$($Null $\phi) +$ dim$(U) +$ dim$($Null $\phi \cap U)$\\
+$=$ dim$($Null $\phi) +$ dim$(U) +$ dim$(\{0\})$ \\
+$=$ dim$($Null $\phi) +$ dim$(U) + 0$\\
+$=$ dim$($Null$\phi) +$dim$(U)$
+
+$\Rightarrow$ dim$(V) =$ dim$($Null $\phi + U)$
+
+$\Rightarrow$ $V =$ Null $\phi + U$
+
+$\Rightarrow$ $V =$ Null $\phi \oplus U$
+
+\vspace{0.618 em}
+$\blacksquare$
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
