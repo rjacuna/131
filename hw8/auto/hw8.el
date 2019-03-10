@@ -16,6 +16,7 @@
     "cancel"
     "ulem"
     "geometry"
-    "enumitem"))
+    "enumitem"
+    "stackengine"))
  :latex)
 

@@ -19,12 +19,14 @@
 
 \usepackage{enumitem}
 
+\usepackage{stackengine}
+
 \renewcommand\qedsymbol{$\blacksquare$}
 
 \begin{document}
 
 \begin{center}
-  \textbf{MATH} 131---\textbf{HOMEWORK} n
+  \textbf{MATH} 131---\textbf{HOMEWORK} 8
 
   \color{red}R\color{teal}icardo
   \color{red}J\color{cyan}.
@@ -33,55 +35,372 @@
   \color{teal}(\color{red}862079740\color{teal})\color{black}
 \end{center}\vspace{1.618em}
 
-\paragraph{Q1}
+``$\guillemotright n \guillemotleft$'' $:= $ ``Statement number $n$''
+
+\paragraph{Q1} Determine the following linear maps of vector spaces over $\mathbb{R}$ are
+isomorphism or not. If it is an isomorphism, find its inverse map. (Hint: inverse of
+matrices.) If it is not an isomorphism, briefly explain why.
+
+(1) (Rotation by 60$^\circ$)
+\[L:\mathbb{R}^2 \rightarrow \mathbb{R}^2\]
+\[(x,y) \mapsto (\frac{x}{2} -\frac{\sqrt{3}}{2}y, \frac{\sqrt{3}}{2}x +\frac{1}{2}y)\]
+
+$\mathcal{E}=\{e_1,e_2\}=\mathcal{F}: e_1 = (1,0), e_2 = (0,1):$
+
+$ [ L ]_{\mathcal{F} \leftarrow \mathcal{E}} =$
+$\left[
+  \begin{array}{c|c}
+    L(e_1)&L(e_2)
+  \end{array}
+\right]
+$
+$=$
+$
+\begin{bmatrix}
+  \frac{1}{2} & -\frac{\sqrt{3}}{2}\\
+   \frac{\sqrt{3}}{2} & \frac{1}{2}
+\end{bmatrix}
+$
+
+I know that the transpose will work because, $L(e_i) \perp L(e_2)$,
+and $|L(e_1)|=|L(e_2)|=1$--- i.e. L is an orthogonal matrix.
+
+$ [ L ]_{\mathcal{E} \leftarrow \mathcal{F}}^T =$
+$
+\begin{bmatrix}
+  \frac{1}{2} & \frac{\sqrt{3}}{2}\\
+  -\frac{\sqrt{3}}{2} & \frac{1}{2}
+\end{bmatrix}
+$
+$= [ K ]_{\mathcal{F} \leftarrow \mathcal{E}}$
+
+Just routine verification will show that $[L][K] = I = [K][L]$
+
+$
+\begin{bmatrix}
+  \frac{1}{2} & -\frac{\sqrt{3}}{2}\\
+  \frac{\sqrt{3}}{2} & \frac{1}{2}
+\end{bmatrix}
+$
+$
+\begin{bmatrix}
+  \frac{1}{2} & \frac{\sqrt{3}}{2}\\
+  -\frac{\sqrt{3}}{2} & \frac{1}{2}
+\end{bmatrix}
+$
+$=$
+$
+\begin{bmatrix}
+  (\frac{1}{2})^2 +(-\frac{\sqrt{3}}{2})^2 &
+  \frac{1}{2}(\frac{\sqrt{3}}{2}) - \frac{\sqrt{3}}{2}(\frac{1}{2})\\
+  \frac{\sqrt{3}}{2}(\frac{1}{2}) + \frac{1}{2}(-\frac{\sqrt{3}}{2}) &
+  (\frac{\sqrt{3}}{2})^2 + (\frac{1}{2})^2
+\end{bmatrix}
+$
+
+$= I =$
+
+$
+\begin{bmatrix}
+  (\frac{1}{2})^2 +(\frac{\sqrt{3}}{2})^2 &
+  \frac{1}{2}(-\frac{\sqrt{3}}{2}) + \frac{\sqrt{3}}{2}(\frac{1}{2})\\
+  -\frac{\sqrt{3}}{2}(\frac{1}{2}) + \frac{1}{2}(\frac{\sqrt{3}}{2}) &
+  (-\frac{\sqrt{3}}{2})^2 + (\frac{1}{2})^2
+\end{bmatrix}
+$
+$=$
+$
+\begin{bmatrix}
+  \frac{1}{2} & \frac{\sqrt{3}}{2}\\
+  -\frac{\sqrt{3}}{2} & \frac{1}{2}
+\end{bmatrix}
+$
+$
+\begin{bmatrix}
+  \frac{1}{2} & -\frac{\sqrt{3}}{2}\\
+  \frac{\sqrt{3}}{2} & \frac{1}{2}
+\end{bmatrix}
+$
+
+Reading back the linear map corresponding to $[ K ]$ we have, the
+inverse map $K$ of $L$:
+
+$K:\mathbb{R}^2 \rightarrow \mathbb{R}^2$ defined by\\
+$(x,y) \mapsto (\frac{\sqrt{3}}{2}y+\frac{1}{2}x,\frac{1}{2}y-\frac{\sqrt{3}}{2}x)$
+
+So, $L$ is an isomorphism.
+
+(2) (Reflection about x–axis)
+\[L:\mathbb{R}^2 \rightarrow \mathbb{R}^2\]
+\[(x, y) \mapsto (x, −y)\]
+
+Immediately $L$ is it's own inverse.
+
+$(x,y) \stackrel{L}{\rightarrow} (x,-y) \stackrel{L}{\rightarrow}
+(x,-(-y)) = (x,y)$
+
+So, $L$ is an isomorphism.
+\newpage
+(3)
+
+\[L:\mathbb{R}^2 \rightarrow \mathbb{R}^2\]
+\[(x,y,z) = (x+2y+3z,4x+5y+6z,7x+8y+9z)\]
+
+$\mathcal{E}=\{e_1,e_2,e_3\}=\mathcal{F}: e_1 = (1,0,0), e_2 =
+(0,1,0), e_3 = (0,0,1):$
+
+$[ L ]_{\mathcal{F} \leftarrow \mathcal{E}} =$
+
+$\left[
+  \begin{array}{c|c|c}
+    L(e_1)&L(e_2)&L(e_3)
+  \end{array}
+\right]
+$
+$=$
+$
+\begin{bmatrix}
+  1&2&3\\
+  4&5&6\\
+  7&8&9
+\end{bmatrix}
+$
+
+Gauss-Jordan Elimination:
+
+$\left[
+  \begin{array}{ccc|ccc}
+  1&2&3&1&0&0\\
+  4&5&6&0&1&0\\
+  7&8&9&0&0&1
+  \end{array}
+\right]
+$
+$\xrightarrow[-7R_1+R_3 \mapsto R_3]{-4R_1+R_2 \mapsto R_2}
+$\left[
+  \begin{array}{ccc|ccc}
+  1&2&3&1&0&0\\
+  0&-3&-6&-4&1&0\\
+  0&-6&-12&-7&0&1
+  \end{array}
+\right]
+$
+$\xrightarrow[]{-2R_1+R_2 \mapsto R_2}
+$\left[
+  \begin{array}{ccc|ccc}
+  1&2&3&1&0&0\\
+  0&-3&-6&-4&1&0\\
+  0&0&0&1&0&1
+  \end{array}
+\right]
+$
+
+Since, adding a scalar multiple of a row to another doesn't
+change the determinant, this Gauss-Jordan Matrix in Row Echelon Form (REF),
+has the same determinant as $[L]$. The determinant of the REF is the
+trace of the REF which is $0$, so the determinant of $[L]$ is $0$.
+
+So, $L$ is not invertible.
+
+So, $L$ is not an isomorphism.
+
+\paragraph{Q2} Determine the following spaces are isomorphic or not. If they are
+isomorphic, give one isomorphism explicitly.\\
+
+(1) $\mathcal{L}(\mathbb{R}^2 , \mathbb{R}^5)$ and $\mathbb{R}^7.$
+
+(by Example 2 in 3D) $\mathcal{L}(\mathbb{R}^2 , \mathbb{R}^5) \cong$
+Mat$_{2\times5}(\mathbb{R})$
+
+dim(Mat$_{2\times5}(\mathbb{R})$) $= 2(5) = 10 \neq 7 =$
+dim($\mathbb{R}^7$)
+
+So, $\mathcal{L}(\mathbb{R}^2 , \mathbb{R}^5)$ and $\mathbb{R}^7$ are
+not isomorphic (by Theorem 1 in 3D)\\
+
+(2) Span$((1, 1, 0), (2, 5, 6))$ and $\mathbb{R}^3$
+
+Since, $(1,1,0) \neq k(2,5,6)$, where $k \in \mathbb{R}$
+
+$\{(1,1,0),(2,5,6)\}$ is a basis for Span$((1, 1, 0), (2, 5, 6))$.
+
+So, dim(Span$((1, 1, 0), (2, 5, 6))$) $=$ $|\{(1,1,0),(2,5,6)\}| = 2
+\neq 3 =$ dim($\mathbb{R}^3$)\\
+
+\newpage
+(3) $\{(x, y, z) ∈ \mathbb{R}^3 | 2x + 2y + z = 0\}$ and
+$\mathbb{R}^2.$\\
+
+$z=-2x-2y \Rightarrow (x,y,z) \mapsto (x,y,-2x-2y)$
+
+$\Rightarrow (1,0,0) \mapsto (1,0,-2)$,$ (0,1,0) \mapsto (0,1,-2)$, and
+$(0,0,1) \mapsto (0,0,0)$
+
+$\Rightarrow$$\{(x, y, z) ∈ \mathbb{R}^3 | 2x + 2y + z = 0\}$ $=$
+span($\{(1,0,-2),(0,1,-2)\}$)
+
+$\Rightarrow$dim($\{(x, y, z) ∈ \mathbb{R}^3 | 2x + 2y + z = 0\}$) $=$
+$|\{(1,0,-2),(0,1,-2)\}| = 2 =$ dim($\mathbb{R}^2$)
+
+(by Theorem 1 in 3D) they're isomorphic\\
+
+
+$R: \{(x, y, z) ∈ \mathbb{R}^3 | 2x + 2y + z = 0\} \rightarrow
+\mathbb{R}^2$ defined by
+
+$(1,0,-2) \mapsto(1,0)$\\
+$(0,1,-2) \mapsto(0,1)$
+
+Extend $R$ to a linear map for any $a_1,a_2 \in \mathbb{R}$ by,\\
+$R(a_1(1,0,-2)+a_2(0,1,-2))= a_1R(1,0,-2)+a_2R(0,1,-2)$
+
+$J:\mathbb{R}^2\rightarrow \{(x, y, z) ∈ \mathbb{R}^3 | 2x + 2y + z = 0\}
+$ defined by
+
+$(x,y) \mapsto (x,y,-2x-2y)$
+
+
+$(1,0,-2) \stackrel{R}{\rightarrow} (1,0) \stackrel{J}{\rightarrow}
+(1,0,-2) $\\
+$(0,1,-2) \stackrel{R}{\rightarrow} (0,1) \stackrel{J}{\rightarrow} (0,1,-2) $
+
+$\Rightarrow JR = id_{ \{(x, y, z) ∈ \mathbb{R}^3 | 2x + 2y + z = 0\}}$
+
+
+$(1,0) \stackrel{J}{\rightarrow} (1,0,-2) \stackrel{R}{\rightarrow}
+(1,0) $\\
+$(0,1) \stackrel{J}{\rightarrow} (0,1,-2) \stackrel{R}{\rightarrow}
+(0,1) $\\
+
+$\Rightarrow JR = id_{\mathbb{R}^2}$
+
+
+
+
+\paragraph{Q3}Suppose $T ∈ \mathcal{L}(U, V )$ and $S ∈ \mathcal{L}(V, W )$ are both invertible linear
+maps. Prove that $ST ∈ \mathcal{L}(U, W )$ is invertible and
+$(ST)^{-1} = T^{-1} S^{-1}$.
 
 \uwave{Pf\enskip.}
 \vspace{0.618 em}
+
+Suppose $T ∈ \mathcal{L}(U, V)$ and $S ∈ \mathcal{L}(V, W)$ are both invertible linear
+maps.\\
+
+$T$ is invertible $\Rightarrow \exists T^{-1} \in \mathcal{L}(V,U):
+TT^{-1}=I_{n\times n}=T^{-1}T$, $n \in \mathbb{N}$
+$\guillemotright 1 \guillemotleft$
+
+$\Rightarrow$ $T$ is an isomorphism $\Rightarrow$ $U
+\cong V \Rightarrow$ dim$(U) =$ dim$(V) := n$ $\guillemotright \alpha \guillemotleft$
+
+$S$ is invertible $\Rightarrow \exists S^{-1} \in \mathcal{L}(W,V):
+SS^{-1}=I_{m\times m}=S^{-1}S$, $m \in \mathbb{N}$ $\guillemotright 2 \guillemotleft$
+
+$\Rightarrow$ $S$ is an isomorphism $\Rightarrow$ $V
+\cong W \Rightarrow$ dim$(V) = $ dim$(W) := m$ $\guillemotright \beta \guillemotleft$
+
+$\guillemotright \alpha \guillemotleft$ and $\guillemotright \beta \guillemotleft$ $\Rightarrow$ $m = n$ $\Rightarrow$
+$I_{n\times n} = I_{m\times m} := I$
+
+$STT^{-1}S^{-1}\stackrel{\guillemotright 1 \guillemotleft}{=\joinrel=} S I
+S^{-1}
+\stackrel{multiply\enskip by\enskip
+  I}{=\joinrel=\joinrel=\joinrel=\joinrel=\joinrel=\joinrel=\joinrel=\joinrel=}
+SS^{-1}\stackrel{\guillemotright 2 \guillemotleft}{=\joinrel=}  I\enskip\enskip\enskip \guillemotright 3 \guillemotleft$\\
+$T^{-1}S^{-1}ST\stackrel{\guillemotright 2 \guillemotleft}{=\joinrel=} T I
+T^{-1}
+\stackrel{multiply\enskip by\enskip
+  I}{=\joinrel=\joinrel=\joinrel=\joinrel=\joinrel=\joinrel=\joinrel=\joinrel=}
+T^{-1}T\stackrel{\guillemotright 1 \guillemotleft}{=\joinrel=}
+I\enskip \quad\guillemotright 4 \guillemotleft
+$\\
+
+$\guillemotright 3 \guillemotleft$ and $\guillemotright 4 \guillemotleft$ $\Rightarrow (ST)^{-1}=T^{-1}S^{-1}$
+
 
 \vspace{0.618 em}
 $\blacksquare$
 
-
-
-\paragraph{Q2}
+\newpage
+\paragraph{Q4} Suppose $V$ is a finite-dimensional and $S, T ∈ \mathcal{L}(V)$. Prove that $ST$ is
+invertible if and only if both $S$ and $T$ are invertible.
 
 \uwave{Pf\enskip.}
 \vspace{0.618 em}
+
+$\forall S,T \in \mathcal{L}(V):$
+
+$(\Leftarrow)$ Let $V=U=W$ in Q3 of this homework and the desired
+result is proven. Namely $ST$ is invertible.
+
+$(\Rightarrow)$ Ass. $ST$ is invertible
+
+Consider the contrapositive statement, of ``if $ST$ is invertible, then
+both $S$ and $T$ are invertible'',\\ which is ``if not
+both $S$ and $T$ are invertible, then $ST$ is not invertible''.\\ By
+DeMorgan's Theorem it turns into ``if $S$ is not invertible or $T$ is not
+invertible, then $ST$ is not invertible''
+
+So, further assume $S$ is not invertible.
+
+$\Rightarrow $det$([S])=0$
+
+(By, Ass.) $ST$ invertible $\Rightarrow$ det$([ST]) \neq 0 \quad \guillemotright \alpha \guillemotleft$
+
+But, by the properties of the determinant,
+
+det$([ST]) =$ det$([S][T]) =$ det$([S])$det$([T]) = 0$ det$([T]) =0
+\quad$ $\guillemotright \beta \guillemotleft$
+
+$\guillemotright \alpha \guillemotleft$ contradicts $\guillemotright \beta \guillemotleft$ so $ST$ cannot be invertible if $S$
+is not invertible.\\
+By the symmetry of the problem, $ST$ cannot be invertible if $T$ is
+not invertible.\\
+So, the contrapositive statement is proven. This completes the proof.
+
 
 \vspace{0.618 em}
 $\blacksquare$
 
-
-
-\paragraph{Q3}
-
-\uwave{Pf\enskip.}
-\vspace{0.618 em}
-
-\vspace{0.618 em}
-$\blacksquare$
-
-\paragraph{Q4}
+\paragraph{Q5} Suppose $V$ is finite-dimensional and dim $V$ > 1. Prove that the
+set of noninvertible operators on $V$ is not a subspace of $\mathcal{L}(V)$. (Hint: you have seen this
+example in previous homeworks when dim $V$= 3.)
 
 \uwave{Pf\enskip.}
 \vspace{0.618 em}
 
-\vspace{0.618 em}
-$\blacksquare$
+Let $\mathcal{F} = \{f_i\}_{i=1}^n$ be a basis for $V$
 
-\paragraph{Q5}
+$\forall T\enskip\in
+\mathcal{L}(V): \exists!\enskip
+[T]_{\mathcal{F}\leftarrow \mathcal{F}} \in $Mat$_{n \times n}(F)$ and
+$\mathcal{L}(V) \cong$ Mat$_{n \times n}(F)$
 
-\uwave{Pf\enskip.}
-\vspace{0.618 em}
+Since, $T$ is invertible $\Rightleftarrow$ det$([T]) \neq 0$
 
-\vspace{0.618 em}
-$\blacksquare$
+So, $X = \{A \in $Mat$_{n×n}(\mathbb{F}) |\enskip $det$ A =0\}$ is
+isomorphic to the set of noninvertible operators on $V$.
 
+$E_{nn}$ is the $n \times n$ matrix with zeros everywhere except for a one at the entry on
+the nth row and nth column.
 
-\paragraph{Q6}
+det$(I_{n \times n} - E_{nn})$ $=$ tr$(I_{n \times n} -E_{nn})$ $= 1^{n-1}(0) = 0$
 
-\uwave{Pf\enskip.}
-\vspace{0.618 em}
+$\Rightarrow I -E_{nn} \in X$
+
+det$(E_{nn})$ $=$ tr$(E_{nn})$ $= 0^{n-1}(1) = 0$
+
+$\Rightarrow E_{nn} \in X$
+
+$I_{n \times n} = I_{n \times n} + 0_{n \times n} = I_{n \times
+  n}+(E_{nn} - E_{nn})  = (I_{n \times n} -E_{nn}) + E_{nn}$
+
+det$(I_{n \times n}) = 1^n = 1$
+
+So, $X$ is not closed under addition.
+
+$X \not\trianglelefteq$ Mat$_{n \times n}(F)$
 
 \vspace{0.618 em}
 $\blacksquare$

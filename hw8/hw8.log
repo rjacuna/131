@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.10.14)  25 FEB 2019 23:00
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.10.14)  6 MAR 2019 14:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -824,33 +824,72 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@inbox=\box47
 \enitdp@description=\count266
 )
-No file hw8.aux.
+(/usr/share/texlive/texmf-dist/tex/latex/stackengine/stackengine.sty
+Package: stackengine 2017/02/13 v4.01\ Stacking text and objects in convenient 
+ways
+
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count267
+)
+(/usr/share/texlive/texmf-dist/tex/generic/listofitems/listofitems.sty
+(/usr/share/texlive/texmf-dist/tex/generic/listofitems/listofitems.tex
+\loi_nestcnt=\count268
+)
+Package: listofitems 2018/01/13 v1.52 Grab items in lists using user-specified 
+sep char (CT)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count269
+\calc@Bcount=\count270
+\calc@Adimen=\dimen158
+\calc@Bdimen=\dimen159
+\calc@Askip=\skip57
+\calc@Bskip=\skip58
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count271
+\calc@Cskip=\skip59
+)
+\c@@stackindex=\count272
+\@boxshift=\skip60
+\stack@tmplength=\skip61
+\temp@stkl=\skip62
+\@stackedboxwidth=\skip63
+\@addedbox=\box48
+\@anchorbox=\box49
+\stackedbox=\box50
+\@centerbox=\box51
+\c@ROWcellindex@=\count273
+) (./hw8.aux)
 \openout1 = `hw8.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 24.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 24.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 24.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 24.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 26.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -886,35 +925,224 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 10.00015pt on input line 31.
+(Font)              scaled to size 10.00015pt on input line 33.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 7.01247pt on input line 31.
+(Font)              scaled to size 7.01247pt on input line 33.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 4.9808pt on input line 31.
+(Font)              scaled to size 4.9808pt on input line 33.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
-(Font)              scaled to size 9.99985pt on input line 31.
+(Font)              scaled to size 9.99985pt on input line 33.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
-(Font)              scaled to size 7.01224pt on input line 31.
+(Font)              scaled to size 7.01224pt on input line 33.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
-(Font)              scaled to size 4.98067pt on input line 31.
-LaTeX Font Info:    Try loading font information for U+msa on input line 31.
+(Font)              scaled to size 4.98067pt on input line 33.
+LaTeX Font Info:    Try loading font information for U+msa on input line 33.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 31.
+LaTeX Font Info:    Try loading font information for U+msb on input line 33.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
 
-] (./hw8.aux) ) 
+LaTeX Warning: Command \guillemotright invalid in math mode on input line 38.
+
+
+LaTeX Warning: Command \guillemotleft invalid in math mode on input line 38.
+
+[1
+
+]
+./hw8.tex:180: Missing $ inserted.
+<inserted text> 
+                $
+l.180 $\left
+            [
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./hw8.tex:189: Missing $ inserted.
+<inserted text> 
+                $
+l.189 $\left
+            [
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (26.34338pt too wide) in paragraph at lines 171--197
+[]$[]$ $[]$$[]$ $[]$$[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--209
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--220
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--229
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 231--233
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 245--246
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 270--274
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 287--289
+
+ []
+
+
+LaTeX Warning: Command \guillemotright invalid in math mode on input line 292.
+
+
+LaTeX Warning: Command \guillemotleft invalid in math mode on input line 292.
+
+
+LaTeX Warning: Command \guillemotright invalid in math mode on input line 295.
+
+
+LaTeX Warning: Command \guillemotleft invalid in math mode on input line 295.
+
+
+LaTeX Warning: Command \guillemotright invalid in math mode on input line 298.
+
+
+LaTeX Warning: Command \guillemotleft invalid in math mode on input line 298.
+
+
+LaTeX Warning: Command \guillemotright invalid in math mode on input line 301.
+
+
+LaTeX Warning: Command \guillemotleft invalid in math mode on input line 301.
+
+
+LaTeX Warning: Command \guillemotright invalid in math mode on input line 303.
+
+
+LaTeX Warning: Command \guillemotleft invalid in math mode on input line 303.
+
+
+LaTeX Warning: Command \guillemotright invalid in math mode on input line 303.
+
+
+LaTeX Warning: Command \guillemotleft invalid in math mode on input line 303.
+
+
+LaTeX Warning: Command \guillemotright invalid in math mode on input line 306.
+
+
+LaTeX Warning: Command \guillemotleft invalid in math mode on input line 306.
+
+
+LaTeX Warning: Command \guillemotright invalid in math mode on input line 310.
+
+
+LaTeX Warning: Command \guillemotleft invalid in math mode on input line 310.
+
+
+LaTeX Warning: Command \guillemotright invalid in math mode on input line 310.
+
+
+LaTeX Warning: Command \guillemotleft invalid in math mode on input line 310.
+
+
+LaTeX Warning: Command \guillemotright invalid in math mode on input line 311.
+
+
+LaTeX Warning: Command \guillemotleft invalid in math mode on input line 311.
+
+
+LaTeX Warning: Command \guillemotright invalid in math mode on input line 315.
+
+
+LaTeX Warning: Command \guillemotleft invalid in math mode on input line 315.
+
+
+LaTeX Warning: Command \guillemotright invalid in math mode on input line 316.
+
+
+LaTeX Warning: Command \guillemotleft invalid in math mode on input line 316.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 306--318
+
+ []
+
+
+LaTeX Warning: Command \guillemotright invalid in math mode on input line 319.
+
+
+LaTeX Warning: Command \guillemotleft invalid in math mode on input line 319.
+
+
+LaTeX Warning: Command \guillemotright invalid in math mode on input line 319.
+
+
+LaTeX Warning: Command \guillemotleft invalid in math mode on input line 319.
+
+[3]
+
+LaTeX Warning: Command \guillemotright invalid in math mode on input line 349.
+
+
+LaTeX Warning: Command \guillemotleft invalid in math mode on input line 349.
+
+
+LaTeX Warning: Command \guillemotright invalid in math mode on input line 354.
+
+
+LaTeX Warning: Command \guillemotleft invalid in math mode on input line 354.
+
+
+LaTeX Warning: Command \guillemotright invalid in math mode on input line 356.
+
+
+LaTeX Warning: Command \guillemotleft invalid in math mode on input line 356.
+
+
+LaTeX Warning: Command \guillemotright invalid in math mode on input line 356.
+
+
+LaTeX Warning: Command \guillemotleft invalid in math mode on input line 356.
+
+./hw8.tex:380: Undefined control sequence.
+<recently read> \Rightleftarrow 
+                                
+l.380 Since, $T$ is invertible $\Rightleftarrow
+                                               $ det$([T]) \neq 0$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[4] (./hw8.aux) ) 
 Here is how much of TeX's memory you used:
- 16699 strings out of 493007
- 331327 string characters out of 6136718
- 498732 words of memory out of 5000000
- 20578 multiletter control sequences out of 15000+600000
+ 17330 strings out of 493007
+ 339615 string characters out of 6136718
+ 523239 words of memory out of 5000000
+ 21189 multiletter control sequences out of 15000+600000
  533082 words of font info for 53 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 39i,6n,68p,10412b,256s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,12n,68p,10412b,290s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on hw8.pdf (1 page).
+Output written on hw8.pdf (4 pages).
