@@ -1,2 +1,2 @@
-# MATH131
-Linear Algebra I UCR Winter 2018
+# Linear Algebra
+Linear Algebra UCR Winter 2018
